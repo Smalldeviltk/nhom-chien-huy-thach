@@ -1,2 +1,0 @@
-link download : http://ellislab.com/codeigniter
-link tutorial: http://www.qhonline.info/forum/showthread.php/4505-tong-hop-cac-bai-viet-huong-dan-cho-codeigniter-framework
