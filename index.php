@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
     <HEAD>
-        <TITLE>Nhóm 8</TITLE>
+        <TITLE>Nhóm 8 - Đồ án cuối kỳ</TITLE>
         <LINK REL="SHORTCUT ICON" href="logo">
         <META http-equiv=Content-Type content="text/html; charset=UTF-8">
     </HEAD>
