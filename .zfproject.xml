@@ -16,6 +16,7 @@
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Register"/>
+        <formFile formName="Login"/>
       </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>

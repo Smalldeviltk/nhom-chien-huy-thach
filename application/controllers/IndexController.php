@@ -46,6 +46,9 @@ class IndexController extends Zend_Controller_Action
     public function loginAction()
     {
         // action body
+                $form = new Application_Form_Login();
+        $form->submit->setLabel('Đăng nhập');
+        $this->view->form = $form;
     }
 
 
