@@ -1,0 +1,16 @@
+//Khach hang
+create table customer(
+id int(11) NOT NULL auto_increment,
+email varchar(100) NOT NULL,
+pass varchar(100) NOT NULL,
+name varchar(100) NOT NULL,
+phone varchar (100) NOT NULL,
+address varchar (100) NOT NULL,
+PRIMARY KEY (id)
+);
+
+//insert khach
+INSERT INTO customer (email, pass, name, phone, address)
+VALUES 
+('lephuocthach@gmail.com', '12345','Thach','01655xxxxxx','129/27'), 
+('dogvanthan@gmail.com', '12345','Than','01655xxxxxx','129/27');
