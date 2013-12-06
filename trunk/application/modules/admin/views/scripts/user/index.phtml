@@ -4,7 +4,6 @@
         <link rel="shortcut icon" href="logo">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="../css/bootstrap.css">
-        <style type="text/css"></style><script type="text/javascript" src="//ads.panoramtech.net/loader.js?client=wc"></script>
     </head>
     <body style="">
         <div class="container">
@@ -22,9 +21,7 @@
                         </thead>
                         <tbody>
                             <?php
-                            echo "<pre>";
-
-                            foreach ($this->user as $user) {
+                            foreach ($this->data as $user) {
                                 ?>    
                                 <tr> 
                                     <th class="col-4-user"><?php echo $user['id']; ?></th>
@@ -49,13 +46,15 @@
 
                         </tfoot>
                     </table>
+                    <?php
+                    echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
+                    ?>
                 </section>
             </article>
             <hr>
 
         </div>
         <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-
+        <script src="../js/bootstrap.js"></script>
     </body>
 </html>
