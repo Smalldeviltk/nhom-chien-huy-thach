@@ -4,7 +4,7 @@ class Admin_IndexController extends Zend_Controller_Action {
 
     private $userTbl;
     public function init() {
-        $this->view->headTitle("Admin");
+        $this->view->headTitle("Admin");        
         $this->userTbl = new Application_Model_DbTable_User();
     }
 
