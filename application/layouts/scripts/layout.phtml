@@ -2,8 +2,9 @@
 <html>  
     <head>
         <title>Đồ án cuối kì</title>
-        <LINK REL="SHORTCUT ICON" href="logo">
-        <link rel="shortcut icon" href="logo">
+        <LINK REL="SHORTCUT ICON" href="<?php echo $this->baseUrl() . "/"; ?>logo">
+        <link rel="shortcut icon" href="<?php echo $this->baseUrl() . "/"; ?>logo">
+        <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/bootstrap.css>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <?php echo $this->headTitle() ?>
         <?php echo $this->headMeta() ?>
@@ -121,5 +122,7 @@
                 </div>
             </footer>
         </div>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src=<?php echo $this->baseUrl() . "/"; ?>js/bootstrap.js></script>
     </body> 
 </html>
