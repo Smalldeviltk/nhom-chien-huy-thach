@@ -7,47 +7,6 @@
         <div class="container">
             <article class="row">
                 <section class="span8">
-                    <table id="p_post">
-                        <thead>
-                            <tr>
-                                <th class="col-4-user">ID</th>
-                                <th class="col-5-user">Username</th>
-                                <th class="col-7-user">Level</th>                   
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            foreach ($this->data as $user) {      ?>    
-                                <tr> 
-                                    <th class="col-4-user"><?php echo $user['id']; ?></th>
-                                    <th class="col-5-user"><?php echo $user['username']; ?>
-                            <div class="row_action">
-                                <span class="row_edit">
-                                    <a href="<?php echo $this->baseUrl('/admin/user/?ct&id=' . $user['id']) ?>">Xem</a>
-                                </span>
-                                <span class="row_del">
-                                    <a href="<?php echo $this->baseUrl('/admin/user/delete/?delete&user=' . $user['username']); ?>">Xóa</a>
-                                </span>                        
-                            </div>
-                            </th>
-                            <?php if ($user['level'] == 1) { ?>
-                                <th class="col-7-user"><?php echo 'Member'; ?></th>
-                            <?php } else { ?>
-                                <th class="col-7-user"><?php echo 'Admin'; ?></th>
-                                <?php } ?>
-
-                            </tr>                                          
-                            <?php
-                        }
-                        ?>             
-                        </tbody>
-                        <tfoot>
-
-                        </tfoot>
-                    </table>
-                    <?php
-                    echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
-                    ?>
 
                 </section>
             </article>
