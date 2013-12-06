@@ -1,12 +1,12 @@
 <?php
 
-class Application_Model_DbTable_Customer extends Zend_Db_Table_Abstract {
+class Model_DbTable_Customer extends Zend_Db_Table_Abstract {
 
-    protected $_name = 'customer';
+    protected $_name = 'user';
 
     public function getCustomer($id) {
         $id = (int) $id;
-        $row = $this->fetchRow('id = ' . $id);
+        $row = $this->fetchRow('id = '.$id);
         if (!$row) {
             throw new Exception("Could not find row $id");
         }
