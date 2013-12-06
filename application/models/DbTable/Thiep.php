@@ -22,6 +22,15 @@ class Application_Model_DbTable_Thiep extends Zend_Db_Table_Abstract {
         $data = $this->fetchall($query);
         return $data->toArray();
     }
+    public function addThiep($maSp, $tenSp, $thongtinsp, $gia) {
+        $data = array(
+            'MaSanPhan' => $maSp,
+            'TenSanPham' => $tenSp,
+            'ThongTinSanPham' => $thongtinsp,
+            'Gia' => $gia,            
+        );
+        $this->insert($data);
+    }
 
 }
 
