@@ -1,15 +1,19 @@
 <?php
 
+
+
 class IndexController extends Zend_Controller_Action {
 
     public function init() {
+        
     }
 
     public function indexAction() {
+//        $thiep = new Application_Model_DbTable_Thiep();
+//        $this->view->thiep = $thiep->fetchAll();
     }
-    
-    public function registerAction()
-    {
+
+    public function registerAction() {
         // action body
         $form = new Application_Form_Register();
         $form->submit->setLabel('Đăng kí');
@@ -34,16 +38,20 @@ class IndexController extends Zend_Controller_Action {
                 $form->populate($formData);
             }
         }
-     
     }
 
-    public function loginAction()
-    {
+    public function loginAction() {
         // action body
-                $form = new Application_Form_Login();
+        $form = new Application_Form_Login();
         $form->submit->setLabel('Đăng nhập');
         $this->view->form = $form;
     }
 
+    public function viewAction() {
+        // action body
+        $id = $this->_getParam('id');
+        $chitiet = new Application_Model_DbTable_Thiep();
+        $this->view->chitiet = $chitiet->laySanPham($id);
+    }
 
 }
