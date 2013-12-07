@@ -17,36 +17,30 @@
                             <div class="center_prod_box_big">
                                 <div class="product_img_big">
                                     <a href="#" title="header=[Zoom] body=[&nbsp;]">
-                                        <img src="<?php echo $this->baseUrl() . "/"; ?>img/laptop.gif" alt="" title="" border="0" />
+                                        <img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $detail['hinhanh']; ?>" alt="" title="" border="0" />
                                     </a>
-                                    <div class="thumbs">
-                                        <a href="#" title="header=[Thumb1] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>img/thumb1.gif" alt="" /></a>
-                                        <a href="#" title="header=[Thumb2] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>img/thumb1.gif" alt="" /></a>
-                                        <a href="#" title="header=[Thumb3] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>imgc/thumb1.gif" alt="" /></a>
-                                    </div>
                                 </div>
                                 <div class="details_big_box">
                                     <div class="product_title_big"><?php echo $detail['masanpham']; ?></div>
                                     <div class="specifications">
-                                        Disponibilitate: <span class="blue"><?php echo $detail['thongtin']; ?></span><br />
-                                        Garantie: <span class="blue">24 luni</span><br />
-                                        Tip transport: <span class="blue">Mic</span><br />
-                                        Pretul include <span class="blue">TVA</span><br />
+                                        Thong tin: <span class="blue"><?php echo $detail['thongtin']; ?></span><br />
                                     </div>
                                     <div class="prod_price_big">
                                         <span class="reduce"><?php echo $detail['gia']; ?></span> 
-                                        <span class="price"><?php echo $detail['gia']; ?></span>
+                                        <span class="price"><?php echo $detail['giac']; ?></span>
                                     </div>
-
-                                    <a href="#" class="addtocart">add to cart</a>
-                                    <a href="#" class="compare">compare</a>
                                 </div>
                             </div>
-                            <div class="bottom_prod_box_big"></div>
+                            <div class="bottom_prod_box_big">
+
+                            </div>
+                            
                         </div>
                         <?php
                     }
-                    ?>     
+                    ?>   
+                        <p>MẪU 1:</p>
+                                <p><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $detail['hinhanh']; ?>" alt="" width="700" height="486" /></p>
                 </section>
             </article>
             <hr>
