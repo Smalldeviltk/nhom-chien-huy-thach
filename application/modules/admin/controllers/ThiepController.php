@@ -22,8 +22,8 @@ class Admin_ThiepController extends Zend_Controller_Action {
     public function indexAction() {
         $adapter = new Zend_Paginator_Adapter_DbSelect($this->thiepTable->listAllThiep());
         $paginator = new Zend_Paginator($adapter);
-        $paginator->setItemCountPerPage(3);
-        $paginator->setPageRange(3);
+        $paginator->setItemCountPerPage(9);
+        $paginator->setPageRange(5);
         $currentPage = $this->_request->getParam('page', 1);
         $paginator->setCurrentPageNumber($currentPage);
         $this->view->data = $paginator;
