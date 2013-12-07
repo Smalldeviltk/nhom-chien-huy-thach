@@ -3,41 +3,30 @@
     <head>
         <title>Đồ án cuối kì</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/centercontent.css>
     </head>
     <body style="">
         <div class="container">
             <article class="row">
-                <section class="span8">
+                <section class="span9">
                     <h3>This is your project's main page</h3>
-                    <table id="p_post">
-                        <tbody>
                             <?php
                             foreach ($this->data as $thiep) {
                                 ?>    
-                                <tr> 
-                                    <th class="col-4-user"><?php echo $thiep['id']; ?></th>
-                                    <th class="col-5-user"><?php echo $thiep['masanpham']; ?>
-                            <div class="row_action">
-                                <span class="row_edit">
-                                    <a href="<?php echo $this->baseUrl('/admin/thiep/detail?ctsp&id=' . $thiep['id']) ?>">Xem</a>
-                                </span>
-                                <span class="row_del">
-                                    <a href="<?php echo $this->baseUrl('/admin/user/delete/?delete&user=' . $thiep['username']); ?>">Xóa</a>
-                                </span>                        
-                            </div>
-                            </th>
-                            <th class="col-6-user"><?php echo $thiep['tensanpham']; ?></th>
-                            <th class="col-7-user"><?php echo $thiep['gia']; ?></th>
-                            </tr>                                          
+                                <!-- Product -->
+                            <div class="prod_box">
+                                <div class="top_prod_box"></div>
+                                <div class="center_prod_box">
+                                    <div class="product_title"><a href="#"><?php echo $thiep['tensanpham']; ?></a></div>
+                                    <div class="product_image"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $thiep['hinhanh']; ?>" alt="Laptop"/></a></div>
+                                    <div class="product_price"> <span class="reduce">350$</span> <span class="price">270$</span> </div>
+                                </div>
+                                <div class="bottom_prod_box"></div>
+                                <div class="prod_details_tab"> 
+                                    <a href="<?php echo $this->baseUrl('/admin/thiep/detail?ctsp&id=' . $thiep['id']) ?>" class="prod_details">details</a> </div>
+                            </div>   
                             <?php
                         }
-                        ?>             
-                        </tbody>
-                        <tfoot>
-
-                        </tfoot>
-                    </table>
-                    <?php
                     echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
                     ?>
                 </section>

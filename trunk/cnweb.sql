@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `thiep` (
 -- Dumping data for table `thiep`
 --
 
-INSERT INTO `thiep` (`masanpham`, `tensanpham`, `thongtinsanpham`, `gia`, `hinhanh`) VALUES
+INSERT INTO `thiep` (`masanpham`, `tensanpham`, `thongtin`, `gia`, `hinhanh`) VALUES
 ('1', 'Kim Binh Mai', 'kim-binh-mai', '50000', '1.jpg');
 ('2', 'Nhuc Bo Doan', 'nhuc-bo-doan', '50000', '2.jpg');
 
