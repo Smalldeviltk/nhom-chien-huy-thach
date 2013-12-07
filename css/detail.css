@@ -65,6 +65,37 @@ a.compare {
     color: #1c4a52;
 }
 
+.item_product{
+    float:left;
+    width:201px;
+    text-align:center;
+    margin-left:15px;
+    margin-right:15px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.item_product .images{
+    width:201px;
+    height:136px;	
+}
+.item_product .images img{border:1px solid #b3b3b3; width:187px; height:122px; padding:7px; margin-bottom:5px;}
+.item_product .name a{
+    font-weight:bold;
+    color:#6B6B6B;
+}
+.item_product .price{
+    color:#F00;
+}
+.item_product .price span{
+    font-weight:bold;
+}
+
+.prod_box_big {
+width: 650px;
+height: auto;
+float: left;
+padding: 10px 10px 10px 15px;
+}
 
 
 
