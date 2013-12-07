@@ -4,32 +4,38 @@
         <title>Đồ án cuối kì</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/centercontent.css>
+        <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/detail.css>
     </head>
     <body style="">
         <div class="container">
             <article class="row">
                 <section class="span9">
-                    <h3>This is your project's main page</h3>
-                            <?php
-                            foreach ($this->data as $thiep) {
-                                ?>    
-                                <!-- Product -->
-                            <div class="prod_box">
-                                <div class="top_prod_box"></div>
-                                <div class="center_prod_box">
-                                    <div class="product_title"><a href="#"><?php echo $thiep['tensanpham']; ?></a></div>
-                                    <div class="product_image"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $thiep['hinhanh']; ?>" alt="Laptop"/></a></div>
-                                    <div class="product_price"> <span class="reduce">350$</span> <span class="price">270$</span> </div>
-                                </div>
-                                <div class="bottom_prod_box"></div>
-                                <div class="prod_details_tab"> 
-                                    <a href="<?php echo $this->baseUrl('/admin/thiep/detail?ctsp&id=' . $thiep['id']) ?>" class="prod_details">details</a> </div>
-                            </div>   
+                    <div>
+                        <?php
+                        foreach ($this->data as $thiep) {
+                            ?>    
+                            <!-- Product -->
+
+                            <!---->
+                            <div class="item_product">
+                                <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $thiep['hinhanh']; ?>" border="0"></a></div>  
+                                <div style="height:10px; width:100%;"></div>
+                                <div class="name"><a href="<?php echo $this->baseUrl('/admin/thiep/detail?ctsp&id=' . $thiep['id'])
+                            ?>"><?php echo $thiep['tensanpham']; ?></a></div>       
+                            </div>
                             <?php
                         }
-                    echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
-                    ?>
+                        ?>
+                    </div>
+                    <section class="span9">
+                        <div align = "center">
+                            <?php
+                            echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
+                            ?>
+                        </div>
+                    </section>
                 </section>
+
             </article>
             <hr>
 

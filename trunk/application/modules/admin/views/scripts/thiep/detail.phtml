@@ -7,40 +7,28 @@
     <body style="">
         <div class="container">
             <article class="row">
-                <section class="span8">
-                    <?php
-                    foreach ($this->detail as $detail) {
-                        ?>    
-                        <div class="center_title_bar"><?php echo $detail['tensanpham']; ?></div>
-                        <div class="prod_box_big">
-                            <div class="top_prod_box_big"></div>
-                            <div class="center_prod_box_big">
-                                <div class="product_img_big">
-                                    <a href="#" title="header=[Zoom] body=[&nbsp;]">
-                                        <img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $detail['hinhanh']; ?>" alt="" title="" border="0" />
-                                    </a>
-                                </div>
-                                <div class="details_big_box">
-                                    <div class="product_title_big"><?php echo $detail['masanpham']; ?></div>
-                                    <div class="specifications">
-                                        Thong tin: <span class="blue"><?php echo $detail['thongtin']; ?></span><br />
-                                    </div>
-                                    <div class="prod_price_big">
-                                        <span class="reduce"><?php echo $detail['gia']; ?></span> 
-                                        <span class="price"><?php echo $detail['giac']; ?></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bottom_prod_box_big">
-
-                            </div>
-                            
-                        </div>
+                <section class="span9">
+                    <div class="pro_box_big">
                         <?php
-                    }
-                    ?>   
-                        <p>MẪU 1:</p>
-                                <p><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $detail['hinhanh']; ?>" alt="" width="700" height="486" /></p>
+                        foreach ($this->detail as $detail) {
+                            ?>    
+                            <div class="item_product">
+                                <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $detail['hinhanh']; ?>" border="0"></a></div>  
+                                <div style="height:10px; width:100%;"></div>
+                                <div class="name"><a href=""><?php echo $detail['tensanpham']; ?></a></div>       
+                            </div>
+                            <?php
+                        }
+                        ?>   
+                        <div>
+                            <a><?php echo $detail['tensanpham']; ?></a>
+                            <a><?php echo $detail['tensanpham']; ?></a>
+                            <a><?php echo $detail['tensanpham']; ?></a>
+                            <a><?php echo $detail['tensanpham']; ?></a>
+                        </div>
+                    </div>
+                    <p>MẪU 1:</p>
+                    <p><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $detail['hinhanh']; ?>" alt="" width="700" height="486" /></p>
                 </section>
             </article>
             <hr>
