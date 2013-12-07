@@ -31,7 +31,7 @@ class Admin_ThiepController extends Zend_Controller_Action {
     
     public function detailAction() {
         if (isset($_GET['ctsp']) && !empty($_GET['id'])) {
-            $this->view->detail = $this->thiepTable->detailThiep("id = '" . $_GET['id'] . "'");
+            $this->view->detail = $this->thiepTable->fetchThiep($_GET['id'] );
         }
     }
 

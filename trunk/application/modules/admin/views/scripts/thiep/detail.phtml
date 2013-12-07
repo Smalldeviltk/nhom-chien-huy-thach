@@ -8,27 +8,21 @@
         <div class="container">
             <article class="row">
                 <section class="span9">
-                    <div class="pro_box_big">
-                        <?php
-                        foreach ($this->detail as $detail) {
-                            ?>    
+                    <div class="pro_box_big">   
                             <div class="item_product">
-                                <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $detail['hinhanh']; ?>" border="0"></a></div>  
+                                <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $this->detail['hinhanh']; ?>" border="0"></a></div>  
                                 <div style="height:10px; width:100%;"></div>
-                                <div class="name"><a href=""><?php echo $detail['tensanpham']; ?></a></div>       
-                            </div>
-                            <?php
-                        }
-                        ?>   
+                                <div class="name"><a href=""><?php echo $this->detail['tensanpham']; ?></a></div>       
+                            </div> 
                         <div>
-                            <a><?php echo $detail['tensanpham']; ?></a>
-                            <a><?php echo $detail['tensanpham']; ?></a>
-                            <a><?php echo $detail['tensanpham']; ?></a>
-                            <a><?php echo $detail['tensanpham']; ?></a>
+                            <a><?php echo $this->detail['tensanpham']; ?></a>
+                            <a><?php echo $this->detail['tensanpham']; ?></a>
+                            <a><?php echo $this->detail['tensanpham']; ?></a>
+                            <a><?php echo $this->detail['tensanpham']; ?></a>
                         </div>
                     </div>
                     <p>MẪU 1:</p>
-                    <p><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $detail['hinhanh']; ?>" alt="" width="700" height="486" /></p>
+                    <p><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $this->detail['hinhanh']; ?>" alt="" width="700" height="486" /></p>
                 </section>
             </article>
             <hr>
