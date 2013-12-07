@@ -29,8 +29,8 @@ class Admin_UserController extends Zend_Controller_Action {
         //xu ly phan trang
         $adapter = new Zend_Paginator_Adapter_DbSelect($this->muser->listUser());
         $paginator = new Zend_Paginator($adapter);
-        $paginator->setItemCountPerPage(3);
-        $paginator->setPageRange(3);
+        $paginator->setItemCountPerPage(10);
+        $paginator->setPageRange(5);
         $currentPage = $this->_request->getParam('page', 1);
         $paginator->setCurrentPageNumber($currentPage);
         $this->view->data = $paginator;

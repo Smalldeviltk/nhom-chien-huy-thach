@@ -42,6 +42,7 @@ class Admin_Model_User extends Zend_Db_Table_Abstract {
         $data = $this->fetchall($query);
         return $data->toArray();
     }
+    
 
 }
 
