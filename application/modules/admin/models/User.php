@@ -28,6 +28,19 @@ class Admin_Model_User extends Zend_Db_Table_Abstract {
             $query->where($where);
         $data = $this->fetchall($query);
         return $query;
+//        $query = $this->select();
+//        $query->from('user');
+//        if($where !=null)$query->where($where);
+//        $data = $this->fetchall($query);
+//        return $data->toArray();
+    }
+    
+    public function detailUser($where = null, $auth = null) {
+        $query = $this->select();
+        $query->from('user');
+        if($where !=null)$query->where($where);
+        $data = $this->fetchall($query);
+        return $data->toArray();
     }
 
 }

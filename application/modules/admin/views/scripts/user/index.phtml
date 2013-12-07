@@ -27,7 +27,7 @@
                                     <th class="col-5-user"><?php echo $user['username']; ?>
                             <div class="row_action">
                                 <span class="row_edit">
-                                    <a href="<?php echo $this->baseUrl('/admin/user/?ct&id=' . $user['id']) ?>">Xem</a>
+                                    <a href="<?php echo $this->baseUrl('/admin/user/detail?ctsp&id=' . $user['id']) ?>">Xem</a>
                                 </span>
                                 <span class="row_del">
                                     <a href="<?php echo $this->baseUrl('/admin/user/delete/?delete&user=' . $user['username']); ?>">Xóa</a>
