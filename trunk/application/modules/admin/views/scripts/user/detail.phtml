@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Đồ án cuối kì</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/detail.css>
+    </head>
+    <body style="">
+        <div class="container">
+            <article class="row">
+                <section class="span8">
+                    <?php
+                    foreach ($this->detail as $detail) {
+                        ?>    
+                        <div class="center_title_bar"><?php echo $detail['username']; ?></div>
+                        <div class="prod_box_big">
+                            <div class="top_prod_box_big"></div>
+                            <div class="center_prod_box_big">
+                                <div class="product_img_big">
+                                    <a href="#" title="header=[Zoom] body=[&nbsp;]">
+                                        <img src="<?php echo $this->baseUrl() . "/"; ?>img/laptop.gif" alt="" title="" border="0" />
+                                    </a>
+                                    <div class="thumbs">
+                                        <a href="#" title="header=[Thumb1] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>img/thumb1.gif" alt="" /></a>
+                                        <a href="#" title="header=[Thumb2] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>img/thumb1.gif" alt="" /></a>
+                                        <a href="#" title="header=[Thumb3] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>imgc/thumb1.gif" alt="" /></a>
+                                    </div>
+                                </div>
+                                <div class="details_big_box">
+                                    <div class="product_title_big"><?php echo $detail['id']; ?></div>
+                                    <div class="specifications">
+                                        Disponibilitate: <span class="blue">In stoc</span><br />
+                                        Garantie: <span class="blue">24 luni</span><br />
+                                        Tip transport: <span class="blue">Mic</span><br />
+                                        Pretul include <span class="blue">TVA</span><br />
+                                    </div>
+                                    <div class="prod_price_big">
+                                        <span class="reduce">350$</span> <span class="price">270$</span>
+                                    </div>
+
+                                    <a href="#" class="addtocart">add to cart</a>
+                                    <a href="#" class="compare">compare</a>
+                                </div>
+                            </div>
+                            <div class="bottom_prod_box_big"></div>
+                        </div>
+                        <?php
+                    }
+                    ?>     
+                </section>
+            </article>
+            <hr>
+
+        </div>
+    </body>
+</html>
