@@ -5737,47 +5737,47 @@ a.badge:focus {
 
 @-webkit-keyframes progress-bar-stripes {
     from {
-        background-position: 40px 0;
-    }
-    to {
-        background-position: 0 0;
-    }
+    background-position: 40px 0;
+}
+to {
+    background-position: 0 0;
+}
 }
 
 @-moz-keyframes progress-bar-stripes {
     from {
-        background-position: 40px 0;
-    }
-    to {
-        background-position: 0 0;
-    }
+    background-position: 40px 0;
+}
+to {
+    background-position: 0 0;
+}
 }
 
 @-ms-keyframes progress-bar-stripes {
     from {
-        background-position: 40px 0;
-    }
-    to {
-        background-position: 0 0;
-    }
+    background-position: 40px 0;
+}
+to {
+    background-position: 0 0;
+}
 }
 
 @-o-keyframes progress-bar-stripes {
     from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 40px 0;
-    }
+    background-position: 0 0;
+}
+to {
+    background-position: 40px 0;
+}
 }
 
 @keyframes progress-bar-stripes {
     from {
-        background-position: 40px 0;
-    }
-    to {
-        background-position: 0 0;
-    }
+    background-position: 40px 0;
+}
+to {
+    background-position: 0 0;
+}
 }
 
 .progress {
@@ -6168,4 +6168,13 @@ a.badge:focus {
 
 .affix {
     position: fixed;
+}
+
+.bg {
+/*    background-image:url(http://www.hdwallpapersplus.com/wp-content/uploads/2012/10/Opera-Background-Blue-Swirls1.jpg);*/
+    background-image:url(http://www.hdwallpaperstop.com/wp-content/uploads/2013/09/Black-background-HD-Wallpapers.jpg);
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center center;
 }
