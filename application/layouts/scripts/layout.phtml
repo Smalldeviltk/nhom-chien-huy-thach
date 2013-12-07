@@ -14,11 +14,47 @@
     <body>
         <p></p>
         <div class="container">
-            <div class="header ui-corner-all">			
-                <div class="hero-unit">
-                    <img src="<?php echo $this->baseUrl() . "/"; ?>img/MAU_81.jpg"/>
-                </div>
-            </div>
+            <!-- Carousel
+    ================================================== -->
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide">
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/MAU_1.jpg" alt="Third slide">
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        <a>fsdafsafsdfsd</a>
+                                        <br>
+                                        <a>fsdafsafsdfsd</a>
+                                        <a>fsdafsafsdfsd</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div><!-- /.carousel -->
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
