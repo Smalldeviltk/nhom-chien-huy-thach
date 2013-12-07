@@ -16,17 +16,23 @@ class Admin_ThiepController extends Zend_Controller_Action {
     private $thiepTable;
 
     public function init() {
-        $this->thiepTable = new Application_Model_DbTable_Thiep();
+        $this->thiepTable = new Admin_Model_Thiep();
     }
 
     public function indexAction() {
-        if (isset($_GET['ct']) && !empty($_GET['id'])) {//sua
-            $thiepSelect = $this->thiepTable->listThiep("id = '" . $_GET['id'] . "'");
-        } else {
-            $thiepSelect = $this->thiepTable->listThiep();
+        $adapter = new Zend_Paginator_Adapter_DbSelect($this->thiepTable->listAllThiep());
+        $paginator = new Zend_Paginator($adapter);
+        $paginator->setItemCountPerPage(3);
+        $paginator->setPageRange(3);
+        $currentPage = $this->_request->getParam('page', 1);
+        $paginator->setCurrentPageNumber($currentPage);
+        $this->view->data = $paginator;
+    }
+    
+    public function detailAction() {
+        if (isset($_GET['ctsp']) && !empty($_GET['id'])) {
+            $this->view->detail = $this->thiepTable->detailThiep("id = '" . $_GET['id'] . "'");
         }
-
-        $this->view->thieps = $thiepSelect;
     }
 
 }
