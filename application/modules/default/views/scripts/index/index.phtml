@@ -14,6 +14,15 @@
             'action' => 'login'));
         ?>">Đăng nhập</a>
     </p>
+    <p><a href="<?php
+    echo $this->url(array('controller' => 'index',
+        'action' => 'view', 'id'=> '1'));
+    ?>">Thông tin chi tiết sản phẩm 1</a></p>
+
+<p><a href="<?php
+    echo $this->url(array('controller' => 'index',
+        'action' => 'view', 'id'=> '2'));
+    ?>">Thông tin chi tiết sản phẩm 2</a></p>
 </head>
 <body style="">        
     <div class="container">          

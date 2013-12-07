@@ -15,21 +15,32 @@ class Application_Model_DbTable_Thiep extends Zend_Db_Table_Abstract {
     //put your code here
     protected $_name = 'thiep';
 
-    public function listThiep($where=null,$auth=null) {
+    public function listThiep($where = null, $auth = null) {
         $query = $this->select();
         $query->from('thiep');
-        if($where !=null)$query->where($where);
+        if ($where != null)
+            $query->where($where);
         $data = $this->fetchall($query);
         return $data->toArray();
     }
+
     public function addThiep($maSp, $tenSp, $thongtinsp, $gia) {
         $data = array(
             'MaSanPhan' => $maSp,
             'TenSanPham' => $tenSp,
             'ThongTinSanPham' => $thongtinsp,
-            'Gia' => $gia,            
+            'Gia' => $gia,
         );
         $this->insert($data);
+    }
+
+    public function laySanPham($id) {
+        $id = (int) $id;
+        $row = $this->fetchRow('id = ' . $id);
+        if (!$row) {
+            throw new Exception("Could not find row $id");
+        }
+        return $row->toArray();
     }
 
 }
