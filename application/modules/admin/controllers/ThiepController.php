@@ -14,9 +14,11 @@ class Admin_ThiepController extends Zend_Controller_Action {
 
     //put your code here
     private $thiepTable;
+    private $thiepForm;
 
     public function init() {
         $this->thiepTable = new Admin_Model_Thiep();
+        $this->thiepForm = new Admin_Form_ThiepForm();
     }
 
     public function indexAction() {
@@ -28,10 +30,35 @@ class Admin_ThiepController extends Zend_Controller_Action {
         $paginator->setCurrentPageNumber($currentPage);
         $this->view->data = $paginator;
     }
-    
+
     public function detailAction() {
         if (isset($_GET['ctsp']) && !empty($_GET['id'])) {
-            $this->view->detail = $this->thiepTable->fetchThiep($_GET['id'] );
+            $this->view->detail = $this->thiepTable->fetchThiep($_GET['id']);
+        }
+    }
+
+    public function addAction() {
+        $form = new Admin_Form_ThiepForm();
+        $form->submit->setLabel('Thêm sản phẩm');
+        $this->view->form = $form;
+
+
+
+
+
+        if ($this->getRequest()->isPost()) {
+            $formData = $this->getRequest()->getPost();
+            if ($form->isValid($formData)) {
+                $masanpham = $this->getRequest()->getPost('masanpham');
+                $tensanpham = $this->getRequest()->getPost('tensanpham');
+                $thongtin = $this->getRequest()->getPost('thongtin');
+                $gia = $this->getRequest()->getPost('gia');
+                $hinhanh = $this->getRequest()->getPost('hinhanh');
+                $this->thiepTable->addThiep($masanpham, $tensanpham, $thongtin, $gia, $hinhanh);
+                $this->_forward('index','thiep','admin');
+            } else {
+                $form->populate($formData);
+            }
         }
     }
 

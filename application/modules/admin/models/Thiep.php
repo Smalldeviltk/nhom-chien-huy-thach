@@ -36,7 +36,14 @@ class Admin_Model_Thiep extends Zend_Db_Table_Abstract {
         return $this->fetchRow("id = '" . $id . "'");
     }
 
-    public function addThiep($param) {
+    public function addThiep($masanpham, $tensanpham,$thongtin, $gia, $hinhanh) {
+        $this->insert(array(
+			'masanpham'		=>	$masanpham,
+			'tensanpham'		=>	$tensanpham,
+			'thongtin'		=>	$thongtin,
+			'gia'			=>	$gia,
+			'hinhanh'		=>	$hinhanh
+		));
         
     }
 

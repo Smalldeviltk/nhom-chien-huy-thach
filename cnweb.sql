@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2013 at 11:16 AM
+-- Generation Time: Dec 08, 2013 at 05:01 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.1
 
@@ -35,9 +35,8 @@ CREATE TABLE IF NOT EXISTS `thiep` (
   `tensanpham` text NOT NULL,
   `thongtin` text,
   `gia` text,
-  PRIMARY KEY (`id`),
-  FULLTEXT KEY `HinhAnh` (`hinhanh`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `thiep`
@@ -45,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `thiep` (
 
 INSERT INTO `thiep` (`id`, `hinhanh`, `masanpham`, `tensanpham`, `thongtin`, `gia`) VALUES
 (1, 'MAU_1.jpg', '1', 'Nhuc Bo Doan', 'NBD', '5000'),
-(2, '1.jpg', '2', 'Kim Binh Mai', 'kim-binh-mai', '50000'),
+(2, 'MAU_1.jpg', '2', 'Kim Binh Mai', 'kim-binh-mai', '50000'),
 (3, 'MAU_1.jpg', '1', 'Kim Binh Mai', 'kim-binh-mai', '50000'),
 (4, 'MAU_1.jpg', '1', 'Kim Binh Mai', 'kim-binh-mai', '50000'),
 (5, 'MAU_1.jpg', '1', 'clgt', 'ádsadsadasda', '5000');
