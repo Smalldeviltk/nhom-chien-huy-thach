@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Đồ án cuối kì</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/detail.css>
+        <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/centercontent.css>
+    </head>
+    <body style="">
+        <div class="container">
+            <article class="row">
+                <section class="span9">
+                    <div class="center_title_bar">Latest products</div>
+                    <div class="item_product">
+                        <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $this->detail['hinhanh']; ?>" border="0"></a></div>  
+                        <div style="height:10px; width:100%;"></div>
+                        <div class="name"><a href=""><?php echo $this->detail['tensanpham']; ?></a></div>       
+                    </div>
+                    <ul class="product_info">
+                        <li><span><?php echo $this->detail['tensanpham']; ?></span></li>
+                        <li><b>Mã sản phẩm:</b> <?php echo $this->detail['masanpham']; ?></span></li>
+                        <li><b>Giá bán: <span style="color:#F00; font-size:14px;"><?php echo $this->detail['gia']; ?></span></b></li>
+                        <li><b>Lượt xem:</b><span> 85</span></li>
+                    </ul>
+                    <div class ="product_detail">
+                        <div class="center_title_bar">Latest products</div>
+                        <p><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $this->detail['hinhanh']; ?>" alt="" width="700" height="486" /></p>  
+                    </div>
+
+                </section>
+            </article>
+            <hr>
+
+        </div>
+    </body>
+</html>
