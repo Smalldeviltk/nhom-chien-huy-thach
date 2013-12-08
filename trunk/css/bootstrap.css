@@ -6171,10 +6171,23 @@ to {
 }
 
 .bg {
-/*    background-image:url(http://www.hdwallpapersplus.com/wp-content/uploads/2012/10/Opera-Background-Blue-Swirls1.jpg);*/
-    background-image:url(http://www.hdwallpaperstop.com/wp-content/uploads/2013/09/Black-background-HD-Wallpapers.jpg);
+    /*    background-image:url(http://www.hdwallpapersplus.com/wp-content/uploads/2012/10/Opera-Background-Blue-Swirls1.jpg);*/
+    background-image:url(../upload/image/bg.jpg);
     background-attachment:fixed;
     background-repeat:no-repeat;
     background-size: cover;
     background-position:center center;
+}
+
+.bg-list {
+    background-image:url(../upload/image/bg-list.jpg);
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+
+.bg-menu-title {
+/*    background-image:url(../img/menu_title_bg.gif);*/
+    background-color: lightblue;
 }

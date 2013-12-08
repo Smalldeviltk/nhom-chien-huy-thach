@@ -10,63 +10,66 @@
         <?php echo $this->headMeta() ?>
         <?php echo $this->headLink() ?>
         <?php echo $this->headScript() ?>
-        
+
     </head>  
     <body class="bg">
-        
+
         <div class="container">
-            <!-- Carousel
-    ================================================== -->
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/MAU_1.jpg" alt="Third slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        <a>fsdafsafsdfsd</a>
-                                        <br>
-                                        <a>fsdafsafsdfsd</a>
-                                        <a>fsdafsafsdfsd</a>
-                                    </div>
-                                </div>
+            <!-- Carousel ================================================== -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
+                        <div class="container">
+                            <div class="carousel-caption">
+
                             </div>
                         </div>
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                    </div><!-- /.carousel -->
+                    </div>
+                    <div class="item">
+                        <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide">
+                        <div class="container">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/MAU_1.jpg" alt="Third slide">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <a>fsdafsafsdfsd</a>
+                                <br>
+                                <a>fsdafsafsdfsd</a>
+                                <a>fsdafsafsdfsd</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+            <!-- /.carousel -->
+
+
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
                         <ul class="nav">
                             <div class="btn-group">
-                                <button class="btn dropdown-menu"><i class="icon-home"></i> Trang chủ <span ></span></button>
+                                <button class="btn dropdown-menu" onclick="location.href=<?php echo $this->baseUrl() . "/"; ?>;"><i class="icon-home"></i> Trang chủ <span ></span></button>
                             </div>
                             <div class="btn-group">
                                 <button data-toggle="dropdown" data-hover="dropdown" class="btn dropdown-toggle"><i class="icon-ok-circle"></i> Giới thiệu <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu bg">
                                     <li><a href="#">Về đề tài</a></li>
+                                    <li class="divider"></li>
                                     <li><a href="#">Về nhóm 08</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#">Về môn học</a></li>
@@ -74,19 +77,23 @@
                             </div>
                             <div class="btn-group">
                                 <button data-toggle="dropdown" data-hover="dropdown" class="btn dropdown-toggle"><i class="icon-time"></i> Sản Phẩm <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu bg">
                                     <li><a href="#">Thiệp cưới</a></li>
+                                    <li class="divider"></li>
                                     <li><a href="#">Lịch</a></li>
+                                    <li class="divider"></li>
                                     <li><a href="#">Catalogue</a></li>
+                                    <li class="divider"></li>
                                     <li><a href="#">Name card</a></li>
+                                    <li class="divider"></li>
                                     <li><a href="#">Tờ rơi</a></li>
                                 </ul>
                             </div>
                             <div class="btn-group">
-                                <button data-toggle="dropdown" class="btn dropdown-toggle"><i class="icon-trash"></i>Dịch vụ khác</button>
+                                <button data-toggle="dropdown" class="btn dropdown-toggle" onclick="location.href=<?php echo $this->baseUrl() . "/"; ?>;"><i class="icon-trash"></i>Dịch vụ khác</button>
                             </div>
                             <div class="btn-group">
-                                <button data-toggle="dropdown" class="btn dropdown-toggle"><i class="icon-shopping-cart"></i> Liên hệ </button>
+                                <button data-toggle="dropdown" class="btn dropdown-toggle" onclick="location.href=<?php echo $this->baseUrl() . "/"; ?>;"><i class="icon-shopping-cart"></i> Liên hệ </button>
                             </div>
                         </ul>
                     </div>
@@ -94,19 +101,36 @@
             </div>
             <article class="row">
                 <section class="span22">
-                    <ul class="nav nav-list">
-                        <li class="nav-header">Danh mục sản phẩm</li>
+                    <ul class="nav nav-list bg-list">
+                        <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Số lượt truy cập</h6></li>
+                        <li align="center"><h1><img src="http://cc.amazingcounters.com/counter.php?i=3153335&c=9460318"></h1></li>
+                        <li class="divider"></li>
+                        <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Danh mục sản phẩm</h6></li>
                         <li class="active"><a href="#">Thiệp cưới</a></li>
                         <li><a href="#">Lịch</a></li>
                         <li><a href="#">Catalogue</a></li>
                         <li><a href="#">Name card</a></li>
                         <li><a href="#">Tờ rơi</a></li>
-                        <li class="nav-header">Hỗ trợ trực tuyến!</li>
-                        <li><a href="#">Google</a></li>
-                        <li><a href="#">Flickr</a></li>
-                        <li><a href="#">Bing</a></li>
-                        <li><a href="#">Youtube</a></li>
-                        <li><a href="#">Facebook</a></li>
+                        <li class="divider"></li>
+                        <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Hỗ trợ trực tuyến!</h6></li>
+                        <li>
+                            <a href="ymsgr:sendIM?yeuem1000nam_1991">Lê Phước Thạch</a>
+                            <a href="ymsgr:sendIM?yeuem1000nam_1991">
+                                <img src="http://opi.yahoo.com/online?u=yeuem1000nam_1991&t=14">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ymsgr:sendIM?visaoemoi_03tk">Nguyễn Văn Chiến</a>
+                            <a href="ymsgr:sendIM?visaoemoi_03tk">
+                                <img src="http://opi.yahoo.com/online?u=visaoemoi_03tk&t=14">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ymsgr:sendIM?kimcuongcatkimcuong_12">Lâm Văn Quốc Huy</a>
+                            <a href="ymsgr:sendIM?kimcuongcatkimcuong_12">
+                                <img src="http://opi.yahoo.com/online?u=yeuem1000nam_1991&t=14">
+                            </a>
+                        </li>
                     </ul>
                 </section>
                 <section>
@@ -135,7 +159,7 @@
                 </div>
                 <hr>
                 <div class="footer text-left">
-                    <h1>Nhóm 08</h1>
+                    <h2>Nhóm 08</h2>
                 </div>
             </footer>
         </div>
