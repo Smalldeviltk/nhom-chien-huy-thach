@@ -91,14 +91,42 @@ a.compare {
 }
 
 .prod_box_big {
-width: 650px;
-height: auto;
-float: left;
-padding: 10px 10px 10px 15px;
+    width: 650px;
+    height: auto;
+    float: left;
+    padding: 10px 10px 10px 15px;
 }
 
 
+.product_detail_pic{
+    float:left;
+    width:200px;
+    margin-right:10px;
+}
+ul.product_info{
+    float:left; 
+    list-style:none;
+    text-align:center;
+    margin-left:15px;
+    margin-right:15px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+ul.product_info li{
+    padding:3px 0px;
+}
+ul.product_info li span{
+    font-weight:bold;
+    color:#241900;
+    font-size:16px;
+}
 
+
+.product_detail{
+    float:left;
+    width:800px;
+    margin-right:10px;
+}
 
 
 

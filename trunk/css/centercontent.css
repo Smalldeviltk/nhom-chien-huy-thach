@@ -7,10 +7,10 @@
 }
 
 .center_title_bar{
-    width: 520px;
+    width: 690px;
     height: 33px;
     float: left;
-    background: url(../img/bar_bg.gif) no-repeat center;
+    background: url(../img/bar_bg.gif) no-repeat left;
     padding: 0 0 0 40px;
     line-height: 33px;
     margin: 0 0 0 12px;
