@@ -11,21 +11,21 @@
  *
  * @author Mr
  */
-class Model_Thiep extends Zend_Db_Table_Abstract {
+class Admin_Model_Namecard extends Zend_Db_Table_Abstract {
 
     //put your code here
-    protected $_name = "thiep";
+    protected $_name = "namecard";
     protected $_primary = "id";
 
     public function listAllThiep($where = null, $auth = null) {
         $query = $this->select();
-        $query->from('thiep');
+        $query->from('namecard');
         return $query;
     }
 
     public function detailThiep($where = null, $auth = null) {
         $query = $this->select();
-        $query->from('thiep');
+        $query->from('namecard');
         if ($where != null)
             $query->where($where);
         $data = $this->fetchall($query);
@@ -36,7 +36,14 @@ class Model_Thiep extends Zend_Db_Table_Abstract {
         return $this->fetchRow("id = '" . $id . "'");
     }
 
-    public function addThiep($param) {
+    public function addThiep($masanpham, $tensanpham,$thongtin, $gia, $hinhanh) {
+        $this->insert(array(
+			'masanpham'		=>	$masanpham,
+			'tensanpham'		=>	$tensanpham,
+			'thongtin'		=>	$thongtin,
+			'gia'			=>	$gia,
+			'hinhanh'		=>	$hinhanh
+		));
         
     }
 

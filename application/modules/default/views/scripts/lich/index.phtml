@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đồ án cuối kì</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/centercontent.css>
+        <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/detail.css>
+    </head>
+    <body style="">
+        <div class="container">
+            <article class="row">
+                <section class="span9">
+                    <div>
+                        <?php
+                        foreach ($this->data as $thiep) {
+                            ?>    
+                            <!-- Product -->
+
+                            <!---->
+                            <div class="item_product">
+                                <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $thiep['hinhanh']; ?>" border="0"></a></div>  
+                                <div style="height:10px; width:100%;"></div>
+                                <div class="name"><a href="<?php echo $this->baseUrl('/thiep/detail?ctsp&id=' . $thiep['id'])
+                            ?>"><?php echo $thiep['tensanpham']; ?></a></div>       
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <section class="span9">
+                        <div align = "center">
+                            <?php
+                            echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
+                            ?>
+                        </div>
+                    </section>
+                </section>
+            </article>
+            <hr>
+
+        </div>
+    </body>
+</html>
