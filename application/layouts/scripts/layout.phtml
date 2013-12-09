@@ -6,6 +6,17 @@
         <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/bootstrap.css>
         <link rel="stylesheet" href=<?php echo $this->baseUrl() . "/"; ?>css/carousel.css>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src=<?php echo $this->baseUrl() . "/"; ?>js/bootstrap.js></script>
+        <script src=<?php echo $this->baseUrl() . "/"; ?>js/bootstrap-hover-dropdown.js></script>
+        <script src=<?php echo $this->baseUrl() . "/"; ?>js/bootstrap.min.js></script>
+        <script src=<?php echo $this->baseUrl() . "/"; ?>js/holder.js></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.carousel').carousel({interval: 3000});
+                $('.carousel').carousel('cycle');
+            });
+        </script> 
         <?php echo $this->headTitle() ?>
         <?php echo $this->headMeta() ?>
         <?php echo $this->headLink() ?>
@@ -77,11 +88,9 @@
                         <a href="#" class="btn btn-info">Liên hệ với chúng tôi</a>
                     </div>
                 </div>
+                <br>
             </footer>
+            <p class="pull-right"><a href="" style="font-family: FS Maksim;">Nơi tình yêu bắt đầu</a></p>
         </div>
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src=<?php echo $this->baseUrl() . "/"; ?>js/bootstrap.js></script>
-        <script src=<?php echo $this->baseUrl() . "/"; ?>js/bootstrap-hover-dropdown.js></script>
-        <script src=<?php echo $this->baseUrl() . "/"; ?>js/holder.js></script>
     </body> 
 </html>
