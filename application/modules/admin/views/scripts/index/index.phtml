@@ -2,17 +2,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+
     </head>
     <body style="">
         <div class="container">
             <article class="row">
-                <section class="span8">
+                <section class="span9">
+                    Hi <?php echo $this->fullName; ?>!
+                    <br></br>
+                    <a href="<?php echo $this->baseUrl("/admin/index/logout"); ?>">Logout</a>
                 </section>
             </article>
             <hr>
 
         </div>
-        
+
     </body>
 </html>

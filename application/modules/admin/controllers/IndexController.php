@@ -2,12 +2,15 @@
 
 class Admin_IndexController extends Zend_Controller_Action {
 
-    public function init() {
-        $this->view->headTitle("Đồ án cuối kỳ - Admin");        
+    public function indexAction() {
+        $auth = Zend_Auth::getInstance();
+        $infoUser = $auth->getIdentity();
+        $this->view->fullName = $infoUser->username;
     }
 
-    public function indexAction() {
 
+    public function logoutAction() {
+        Zend_Auth::getInstance()->clearIdentity();
     }
 
 }
