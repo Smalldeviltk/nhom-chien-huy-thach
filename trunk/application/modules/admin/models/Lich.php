@@ -36,15 +36,31 @@ class Admin_Model_Lich extends Zend_Db_Table_Abstract {
         return $this->fetchRow("id = '" . $id . "'");
     }
 
-    public function addLich($masanpham, $tensanpham,$thongtin, $gia, $hinhanh) {
+    public function addThiep($masanpham, $tensanpham, $thongtin, $gia, $hinhanh) {
         $this->insert(array(
-			'masanpham'		=>	$masanpham,
-			'tensanpham'		=>	$tensanpham,
-			'thongtin'		=>	$thongtin,
-			'gia'			=>	$gia,
-			'hinhanh'		=>	$hinhanh
-		));
-        
+            'masanpham' => $masanpham,
+            'tensanpham' => $tensanpham,
+            'thongtin' => $thongtin,
+            'gia' => $gia,
+            'hinhanh' => $hinhanh
+        ));
+    }
+
+    public function delteteThiep($id) {
+        $where = "id=" . $id;
+        $this->delete($where);
+    }
+
+    public function updateThiep($masanpham, $tensanpham, $thongtin, $gia, $hinhanh, $id) {
+        $where = "id=" . $id;
+        $data = array(
+            'masanpham' => $masanpham,
+            'tensanpham' => $tensanpham,
+            'thongtin' => $thongtin,
+            'gia' => $gia,
+            'hinhanh' => $hinhanh
+        );
+        $this->update($data, $where);
     }
 
 }
