@@ -6180,14 +6180,15 @@ to {
 }
 
 .bg-list {
-    background-image:url(../upload/image/bg-list.jpg);
-    background-attachment:fixed;
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position:center center;
+    /*    background-image:url(../upload/image/bg-list.jpg);
+        background-attachment:fixed;
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position:center center;*/
+    background-color: #f7f7f7;
 }
 
 .bg-menu-title {
-/*    background-image:url(../img/menu_title_bg.gif);*/
-    background-color: lightblue;
+    /*    background-image:url(../img/menu_title_bg.gif);*/
+    background-color: lightskyblue;
 }
