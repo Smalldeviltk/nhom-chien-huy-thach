@@ -42,6 +42,53 @@ class Admin_UserController extends Zend_Controller_Action {
             $this->view->detail = $this->muser->detailUser("id = '" . $_GET['id'] . "'");
         }
     }
+    
+    public function addAction() {
+        if (isset($_GET['edit']) && !empty($_GET['id'])) {//sua
+            $form = new Admin_Form_UserForm();
+            $form->submit->setLabel('Update sản phẩm');
+            $this->view->form = $form;
+            $thiep = $this->muser->fetchThiep($_GET['id']);
+            $id = $_GET['id'];
+            $this->view->masp = $thiep['username'];
+            if ($this->getRequest()->isPost()) {
+                $formData = $this->getRequest()->getPost();
+                if ($form->isValid($formData)) {
+                    $username = $this->getRequest()->getPost('username');
+                    $password = $this->getRequest()->getPost('password');
+                    $level = $this->getRequest()->getPost('level');
+                    $this->thiepTable->updateThiep($username, $password, $level);
+                    $this->_forward('index', 'user', 'admin');
+                } else {
+                    $form->populate($formData);
+                }
+            }
+        } else {
+            $form = new Admin_Form_UserForm();
+            $form->submit->setLabel('Thêm sản phẩm');
+            $this->view->form = $form;
+
+            if ($this->getRequest()->isPost()) {
+                $formData = $this->getRequest()->getPost();
+                if ($form->isValid($formData)) {
+                    $username = $this->getRequest()->getPost('username');
+                    $password = $this->getRequest()->getPost('password');
+                    $level = $this->getRequest()->getPost('level');
+                    $this->thiepTable->updateThiep($username, $password, $level);
+                    $this->_forward('index', 'user', 'admin');
+                } else {
+                    $form->populate($formData);
+                }
+            }
+        }
+    }
+
+    public function deleteAction() {
+        if (isset($_GET['del']) && !empty($_GET['id'])) {
+            $this->view->detail = $this->muser->delteteThiep($_GET['id']);
+            $this->_redirect('/admin/user');
+        }
+    }
 
 }
 
