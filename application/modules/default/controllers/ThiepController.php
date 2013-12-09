@@ -28,11 +28,12 @@ class ThiepController extends Zend_Controller_Action {
         $paginator->setCurrentPageNumber($currentPage);
         $this->view->data = $paginator;
     }
-    
+
     public function detailAction() {
-        if (isset($_GET['ctsp']) && !empty($_GET['id'])) {
-            $this->view->detail = $this->thiepTable->fetchThiep($_GET['id'] );
-        }
+        $this->_arrParam = $this->_request->getParams();
+        $id = $this->_arrParam['id'];
+        if($id === null) $id = 1;
+        $this->view->detail = $this->thiepTable->fetchThiep($id);
     }
 
 }
