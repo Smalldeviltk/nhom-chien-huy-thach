@@ -1,7 +1,5 @@
 <?php
 
-
-
 class IndexController extends Zend_Controller_Action {
 
     public function init() {
@@ -18,10 +16,6 @@ class IndexController extends Zend_Controller_Action {
         $form = new Application_Form_Register();
         $form->submit->setLabel('Đăng kí');
         $this->view->form = $form;
-
-
-
-
 
         if ($this->getRequest()->isPost()) {
             $formData = $this->getRequest()->getPost();
@@ -52,6 +46,21 @@ class IndexController extends Zend_Controller_Action {
         $id = $this->_getParam('id');
         $chitiet = new Application_Model_DbTable_Thiep();
         $this->view->chitiet = $chitiet->laySanPham($id);
+    }
+
+    public function uploadAction() {
+        $form = new Form_File;
+        if ($this->_request->isPost()) {
+            $upload = new Form_UploadFile_UploadFile;
+            $files = $upload->_upload->getFileInfo();
+            foreach ($files as $file => $info) {
+                if (!$upload->_upload->isUploaded($file)) {
+                    echo "Chua chon file";
+                }
+            }
+            $upload->_upload->receive();
+        }
+        $this->view->form = $form;
     }
 
 }

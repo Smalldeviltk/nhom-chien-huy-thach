@@ -2,46 +2,35 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <p>
-        <a href="<?php
-        echo $this->url(array('controller' => 'index',
-            'action' => 'register'));
-        ?>">Đăng kí</a>
-    </p>
-    <p>
-        <a href="<?php
-        echo $this->url(array('controller' => 'index',
-            'action' => 'login'));
-        ?>">Đăng nhập</a>
-    </p>
-    <p><a href="<?php
-    echo $this->url(array('controller' => 'index',
-        'action' => 'view', 'id'=> '1'));
-    ?>">Thông tin chi tiết sản phẩm 1</a></p>
+    </head>
+    <body style="">        
+        <div class="container">          
+            <article class="row">
+                <section class="span8">
+                    <h3>Tối nay ăn gì ?</h3>
 
-<p><a href="<?php
-    echo $this->url(array('controller' => 'index',
-        'action' => 'view', 'id'=> '2'));
-    ?>">Thông tin chi tiết sản phẩm 2</a></p>
-</head>
-<body style="">        
-    <div class="container">          
-        <article class="row">
-            <section class="span8">
-                <h3>Tối nay ăn gì ?</h3>
+                    <p> Bánh tráng trộn - bánh tráng trứng - bánh tráng nướng - bánh tráng chín.</p>
 
-                <p>Bánh tráng trộn - bánh tráng trứng - bánh tráng nướng - bánh tráng chín.</p>
+                    <p>Ăn cho mập thây, cơ mà trưa rồi kể nghe thèm quá &gt;"&lt;.</p>
 
-                <p>Ăn cho mập thây, cơ mà trưa rồi kể nghe thèm quá &gt;"&lt;.</p>
+                    <h3>Làm sao để mua?</h3>
 
-                <h3>Làm sao để mua?</h3>
+                    <p>Xách honda lên mà chạy....chứ sao!!!</p>
 
-                <p>Xách honda lên mà chạy....chứ sao!!!</p>
-
-                <p>Hết sức rồi huhuhu.</p>
-            </section>
-        </article>
-    </div>
-
-</body>
+                    <p>Hết sức rồi huhuhu.</p>
+                </section>
+                <section>
+                    <dl class="zend_form">
+                        <dd>
+                            <input type="file" name="file" id="file">
+                        </dd>
+                        <dt id="Upload-label">&nbsp;</dt>
+                        <dd id="Upload-element">
+                            <input type="submit" name="Upload" id="Upload" value="Upload">
+                        </dd>
+                    </dl>
+                </section>
+            </article>
+        </div>
+    </body>
 </html>
