@@ -24,10 +24,5 @@ class PublicController extends Zend_Controller_Action {
         }
     }
 
-    public function logoutAction() {
-        $auth = new Qhuyonline_System_Auth();
-        $auth->logout();
-        $this->_redirect('/default');
-    }
 
 }
