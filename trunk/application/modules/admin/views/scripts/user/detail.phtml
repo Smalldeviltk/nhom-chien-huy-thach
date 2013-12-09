@@ -6,50 +6,128 @@
     </head>
     <body style="">
         <div class="container">
-            <article class="row">
-                <section class="span8">
-                    <?php
-                    foreach ($this->detail as $detail) {
-                        ?>    
-                        <div class="center_title_bar"><?php echo $detail['username']; ?></div>
-                        <div class="prod_box_big">
-                            <div class="top_prod_box_big"></div>
-                            <div class="center_prod_box_big">
-                                <div class="product_img_big">
-                                    <a href="#" title="header=[Zoom] body=[&nbsp;]">
-                                        <img src="<?php echo $this->baseUrl() . "/"; ?>img/laptop.gif" alt="" title="" border="0" />
-                                    </a>
-                                    <div class="thumbs">
-                                        <a href="#" title="header=[Thumb1] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>img/thumb1.gif" alt="" /></a>
-                                        <a href="#" title="header=[Thumb2] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>img/thumb1.gif" alt="" /></a>
-                                        <a href="#" title="header=[Thumb3] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>imgc/thumb1.gif" alt="" /></a>
-                                    </div>
-                                </div>
-                                <div class="details_big_box">
-                                    <div class="product_title_big"><?php echo $detail['id']; ?></div>
-                                    <div class="specifications">
-                                        Disponibilitate: <span class="blue">In stoc</span><br />
-                                        Garantie: <span class="blue">24 luni</span><br />
-                                        Tip transport: <span class="blue">Mic</span><br />
-                                        Pretul include <span class="blue">TVA</span><br />
-                                    </div>
-                                    <div class="prod_price_big">
-                                        <span class="reduce">350$</span> <span class="price">270$</span>
-                                    </div>
-
-                                    <a href="#" class="addtocart">add to cart</a>
-                                    <a href="#" class="compare">compare</a>
-                                </div>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <div class="btn-group">
+                                <a class="btn dropdown-menu" href ="<?php echo $this->baseUrl() . "/admin" ?>" style="font-weight: bold;"><i class="icon-home"></i> Admin Bar <span ></span></a>
                             </div>
-                            <div class="bottom_prod_box_big"></div>
-                        </div>
+                            <div class="btn-group">
+                                <a data-toggle="dropdown" data-hover="dropdown" class="btn dropdown-toggle" style="font-weight: bold;"><i class="icon-ok"></i> Giới thiệu <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?php echo $this->baseUrl() . "/about" ?>">Về đề tài</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>contact">Về nhóm 08</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Về môn học</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <a  data-hover="dropdown" class="btn dropdown-toggle" style="font-weight: bold;"><i class="icon-gift "></i> Sản Phẩm <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>thiep">Thiệp</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>lich">Lịch</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>catalogue">Catalogue</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>namecard">Name card</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>toroi">Tờ rơi</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <a class="btn" href ="<?php echo $this->baseUrl() . "/otherservices" ?>" style="font-weight: bold;"><i class="icon-list"></i> Dịch vụ khác</a>
+                            </div>
+                            <div class="btn-group">
+                                <a class="btn" href ="<?php echo $this->baseUrl() . "/contact" ?>" style="font-weight: bold;"><i class="icon-user"></i> Liên hệ </a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-inner">
+                <article class="row">
+                    <section class="span22">
+                        <ul class="nav nav-list bg-list">
+                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Số lượt truy cập</h6></li>
+                            <li align="center"><h1><img src="http://cc.amazingcounters.com/counter.php?i=3153335&c=9460318"></h1></li>
+                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Danh mục sản phẩm</h6></li>
+                            <li><a href="#"> Thiệp</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"> Lịch</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"> Catalogue</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"> Name card</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"> Tờ rơi</a></li>
+                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Hỗ trợ trực tuyến!</h6></li>
+                            <li>
+                                <a href="ymsgr:sendIM?yeuem1000nam_1991">Lê Phước Thạch</a>
+                                <a href="ymsgr:sendIM?yeuem1000nam_1991">
+                                    <img src="http://opi.yahoo.com/online?u=yeuem1000nam_1991&t=14">
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="ymsgr:sendIM?visaoemoi_03tk">Nguyễn Văn Chiến</a>
+                                <a href="ymsgr:sendIM?visaoemoi_03tk">
+                                    <img src="http://opi.yahoo.com/online?u=visaoemoi_03tk&t=14">
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="ymsgr:sendIM?kimcuongcatkimcuong_12">Lâm Văn Quốc Huy</a>
+                                <a href="ymsgr:sendIM?kimcuongcatkimcuong_12">
+                                    <img src="http://opi.yahoo.com/online?u=yeuem1000nam_1991&t=14">
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="span8">
                         <?php
-                    }
-                    ?>     
-                </section>
-            </article>
-            <hr>
+                        foreach ($this->detail as $detail) {
+                            ?>    
+                            <div class="center_title_bar"><?php echo $detail['username']; ?></div>
+                            <div class="prod_box_big">
+                                <div class="top_prod_box_big"></div>
+                                <div class="center_prod_box_big">
+                                    <div class="product_img_big">
+                                        <a href="#" title="header=[Zoom] body=[&nbsp;]">
+                                            <img src="<?php echo $this->baseUrl() . "/"; ?>img/laptop.gif" alt="" title="" border="0" />
+                                        </a>
+                                        <div class="thumbs">
+                                            <a href="#" title="header=[Thumb1] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>img/thumb1.gif" alt="" /></a>
+                                            <a href="#" title="header=[Thumb2] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>img/thumb1.gif" alt="" /></a>
+                                            <a href="#" title="header=[Thumb3] body=[&nbsp;]"><img src="<?php echo $this->baseUrl() . "/"; ?>imgc/thumb1.gif" alt="" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="details_big_box">
+                                        <div class="product_title_big"><?php echo $detail['id']; ?></div>
+                                        <div class="specifications">
+                                            Disponibilitate: <span class="blue">In stoc</span><br />
+                                            Garantie: <span class="blue">24 luni</span><br />
+                                            Tip transport: <span class="blue">Mic</span><br />
+                                            Pretul include <span class="blue">TVA</span><br />
+                                        </div>
+                                        <div class="prod_price_big">
+                                            <span class="reduce">350$</span> <span class="price">270$</span>
+                                        </div>
 
+                                        <a href="#" class="addtocart">add to cart</a>
+                                        <a href="#" class="compare">compare</a>
+                                    </div>
+                                </div>
+                                <div class="bottom_prod_box_big"></div>
+                            </div>
+                            <?php
+                        }
+                        ?>     
+                    </section>
+                </article>
+            </div>
         </div>
     </body>
 </html>
