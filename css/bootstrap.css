@@ -6075,7 +6075,7 @@ to {
 .carousel-indicators {
     position: absolute;
     top: 15px;
-    right: 15px;
+    left: 15px;
     z-index: 5;
     margin: 0;
     list-style: none;
@@ -6084,8 +6084,8 @@ to {
 .carousel-indicators li {
     display: block;
     float: left;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     margin-left: 5px;
     text-indent: -999px;
     background-color: #ccc;
