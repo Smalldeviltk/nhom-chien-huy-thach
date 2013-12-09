@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Đồ án cuối kì</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body style="">
@@ -87,14 +86,14 @@
                         </ul>
                     </section>
                     <section class="span8">
-                        <h3>This is your project's main page</h3>
                         <table id="p_post">
                             <thead>
                                 <tr>
-                                    <th class="col-4-user">ID</th>
-                                    <th class="col-5-user">Username</th>
-                                    <th class="col-6-user">Password</th>
-                                    <th class="col-7-user">Level</th>                   
+                                    <th class="col-4-user">Mã sản phẩm</th>
+                                    <th class="col-5-user">Tên sản phẩm</th>
+                                    <th class="col-6-user">Thông tin</th>
+                                    <th class="col-7-user">Giá</th> 
+                                    <th class="col-3-user">Hình ảnh</th> 
                                 </tr>
                             </thead>
                             <tbody>
@@ -102,19 +101,19 @@
                                 foreach ($this->data as $user) {
                                     ?>    
                                     <tr> 
-                                        <th class="col-4-user"><?php echo $user['id']; ?></th>
-                                        <th class="col-5-user"><?php echo $user['username']; ?>
+                                        <th class="col-4-user"><?php echo $user['masanpham']; ?></th>
+                                        <th class="col-5-user"><?php echo $user['tensanpham']; ?>
                                 <div class="row_action">
                                     <span class="row_edit">
-                                        <a href="<?php echo $this->baseUrl('/admin/user/add?edit&id=' . $user['id']) ?>">Sửa</a>
+                                        <a href="<?php echo $this->baseUrl('/admin/lich/add?edit&id=' . $user['id']) ?>">Sửa</a>
                                     </span>
                                     <span class="row_del">
-                                        <a href="<?php echo $this->baseUrl('/admin/user/delete/?delete&id=' . $user['id']); ?>">Xóa</a>
+                                        <a href="<?php echo $this->baseUrl('/admin/lich/delete/?del&id=' . $user['id']); ?>">Xóa</a>
                                     </span>                        
                                 </div>
                                 </th>
-                                <th class="col-6-user"><?php echo $user['password']; ?></th>
-                                <th class="col-7-user"><?php echo $user['level']; ?></th>
+                                <th class="col-6-user"><?php echo $user['thongtin']; ?></th>
+                                <th class="col-7-user"><?php echo $user['gia']; ?></th>
                                 </tr>                                          
                                 <?php
                             }
