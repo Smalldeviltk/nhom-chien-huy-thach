@@ -38,27 +38,59 @@ class Admin_ThiepController extends Zend_Controller_Action {
     }
 
     public function addAction() {
-        $form = new Admin_Form_ThiepForm();
-        $form->submit->setLabel('Thêm sản phẩm');
-        $this->view->form = $form;
-
-
-
-
-
-        if ($this->getRequest()->isPost()) {
-            $formData = $this->getRequest()->getPost();
-            if ($form->isValid($formData)) {
-                $masanpham = $this->getRequest()->getPost('masanpham');
-                $tensanpham = $this->getRequest()->getPost('tensanpham');
-                $thongtin = $this->getRequest()->getPost('thongtin');
-                $gia = $this->getRequest()->getPost('gia');
-                $hinhanh = $this->getRequest()->getPost('hinhanh');
-                $this->thiepTable->addThiep($masanpham, $tensanpham, $thongtin, $gia, $hinhanh);
-                $this->_forward('index','thiep','admin');
-            } else {
-                $form->populate($formData);
+        if (isset($_GET['edit']) && !empty($_GET['id'])) {//sua
+            $form = new Admin_Form_ThiepForm();
+            $form->submit->setLabel('Update sản phẩm');
+            $this->view->form = $form;
+            $thiep = $this->thiepTable->fetchThiep($_GET['id']);
+            $id = $_GET['id'];
+            $this->view->masp = $thiep['masanpham'];
+            //$this->form->getElement('masanpham')->setValue($thiep['masanpham']);
+//            $this->form->getElement('tensanpham')->setValue($thiep['tensanpham']);
+//            $this->form->getElement('thongtin')->setValue($thiep['thongtin']);
+//            $this->form->getElement('gia')->setValue($thiep['gia']);
+//            //$this->form->getElement('cbbRole')->setValue($user['quyen']);
+//            $this->form->getElement('hinhanh')->setValue($thiep['hinhanh']);
+            if ($this->getRequest()->isPost()) {
+                $formData = $this->getRequest()->getPost();
+                if ($form->isValid($formData)) {
+                    $masanpham = $this->getRequest()->getPost('masanpham');
+                    $tensanpham = $this->getRequest()->getPost('tensanpham');
+                    $thongtin = $this->getRequest()->getPost('thongtin');
+                    $gia = $this->getRequest()->getPost('gia');
+                    $hinhanh = $this->getRequest()->getPost('hinhanh');
+                    $this->thiepTable->updateThiep($masanpham, $tensanpham, $thongtin, $gia, $hinhanh, $id);
+                    $this->_forward('index', 'thiep', 'admin');
+                } else {
+                    $form->populate($formData);
+                }
             }
+        } else {
+            $form = new Admin_Form_ThiepForm();
+            $form->submit->setLabel('Thêm sản phẩm');
+            $this->view->form = $form;
+
+            if ($this->getRequest()->isPost()) {
+                $formData = $this->getRequest()->getPost();
+                if ($form->isValid($formData)) {
+                    $masanpham = $this->getRequest()->getPost('masanpham');
+                    $tensanpham = $this->getRequest()->getPost('tensanpham');
+                    $thongtin = $this->getRequest()->getPost('thongtin');
+                    $gia = $this->getRequest()->getPost('gia');
+                    $hinhanh = $this->getRequest()->getPost('hinhanh');
+                    $this->thiepTable->addThiep($masanpham, $tensanpham, $thongtin, $gia, $hinhanh);
+                    $this->_forward('index', 'thiep', 'admin');
+                } else {
+                    $form->populate($formData);
+                }
+            }
+        }
+    }
+
+    public function deleteAction() {
+        if (isset($_GET['del']) && !empty($_GET['id'])) {
+            $this->view->detail = $this->thiepTable->delteteThiep($_GET['id']);
+            $this->_redirect('/admin/thiep');
         }
     }
 

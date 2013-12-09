@@ -5,6 +5,47 @@
     </head>
     <body style="">
         <div class="container">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            <div class="btn-group">
+                                <button class="btn dropdown-menu" onclick="location.href =<?php echo $this->baseUrl() . "/admin"; ?>;" style="font-weight: bold;"><i class="icon-home"></i> Admin Bar <span ></span></button>
+                            </div>
+                            <div class="btn-group">
+                                <button data-toggle="dropdown" data-hover="dropdown" class="btn dropdown-toggle" style="font-weight: bold;"><i class="icon-ok"></i> Quản lý Thiệp<span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?php echo $this->baseUrl() . "/contact/" ?>">Về đề tài</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>contact">Về nhóm 08</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Về môn học</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <a data-hover="dropdown" class="btn" style="font-weight: bold;"><i class="icon-gift "></i> Sản Phẩm <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>thiep">Thiệp</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>lich">Lịch</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>catalogue">Catalogue</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>namecard">Name card</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>toroi">Tờ rơi</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <a class="btn" href ="<?php echo $this->baseUrl() . "/" ?>" style="font-weight: bold;"><i class="icon-list"></i> Dịch vụ khác</a>
+                            </div>
+                            <div class="btn-group">
+                                <a class="btn" href ="<?php echo $this->baseUrl() . "/contact" ?>" style="font-weight: bold;"><i class="icon-user"></i> Liên hệ </a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <article class="row">
                 <section class="span8">
                     Hi <?php echo $this->fullName; ?>!
