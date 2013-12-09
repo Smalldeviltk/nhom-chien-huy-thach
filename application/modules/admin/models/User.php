@@ -29,15 +29,38 @@ class Admin_Model_User extends Zend_Db_Table_Abstract {
         $data = $this->fetchall($query);
         return $query;
     }
-    
+
     public function detailUser($where = null, $auth = null) {
         $query = $this->select();
         $query->from('user');
-        if($where !=null)$query->where($where);
+        if ($where != null)
+            $query->where($where);
         $data = $this->fetchall($query);
         return $data->toArray();
     }
-    
+
+    public function addUser($username, $password, $level) {
+        $this->insert(array(
+            'username' => $username,
+            'password' => $password,
+            'level' => $level
+        ));
+    }
+
+    public function delteteUser($id) {
+        $where = "id=" . $id;
+        $this->delete($where);
+    }
+
+    public function updateThiep($username, $password, $level) {
+        $where = "id=" . $id;
+        $data = array(
+            'username' => $username,
+            'password' => $password,
+            'level' => $level
+        );
+        $this->update($data, $where);
+    }
 
 }
 
