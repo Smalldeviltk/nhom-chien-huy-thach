@@ -10,6 +10,11 @@
  *
  * @author Mr
  */
-class Admin_Bootstrap extends Zend_Application_Module_Bootstrap{ 
-   
+class Admin_Bootstrap extends Zend_Application_Module_Bootstrap {
+
+    public function _initAutoloader() {
+        //new va da dc dang ky trong zend_registry
+        
+    }
+
 }
