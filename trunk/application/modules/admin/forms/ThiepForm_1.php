@@ -1,6 +1,6 @@
 <?php
 
-class Application_Form_Register extends Zend_Form {
+class Admin_Form_ThiepForm extends Zend_Form {
 
     public function init() {
         /* Form Elements & Other Definitions Here ... */
@@ -28,21 +28,19 @@ class Application_Form_Register extends Zend_Form {
 
 
 
-        $this->setname('customer');
+        $this->setname('thiep');
         //id
-        $id = new Zend_Form_Element_Hidden('id');
-        $id->addFilter('Int');
         //email
-        $email = new Zend_Form_Element_Text('email');
-        $email->setLabel('Email: ')
+        $masanpham = new Zend_Form_Element_Text('masanpham');
+        $masanpham->setLabel('Mã sản phẩm: ')
                 ->setRequired(true)
                 ->addFilter('StripTags')
                 ->addFilter('StringTrim')
                 ->addValidator('NotEmpty')
                 ->setDecorators($elementDecoration);
         //pass
-        $pass = new Zend_Form_Element_Password('pass');
-        $pass->setLabel('Mật khẩu: ')
+        $tensanpham = new Zend_Form_Element_Text('tensanpham');
+        $tensanpham->setLabel('Tên sản phẩm: ')
                 ->setRequired(true)
                 ->addFilter('StripTags')
                 ->addFilter('StringTrim')
@@ -50,39 +48,39 @@ class Application_Form_Register extends Zend_Form {
                 ->setDecorators($elementDecoration);
 
         //name
-        $name = new Zend_Form_Element_Text('name');
-        $name->setLabel('Tên: ')
+        $thongtin = new Zend_Form_Element_Textarea('thongtin');
+        $thongtin->setLabel('Thông tin: ')
                 ->setRequired(true)
                 ->addFilter('StripTags')
                 ->addFilter('StringTrim')
                 ->addValidator('NotEmpty')
+                ->setOptions(array(
+                    'rows' => '3',
+                    'cols' => '30',
+                ))
                 ->setDecorators($elementDecoration);
         //sdt
-        $phone = new Zend_Form_Element_Text('phone');
-        $phone->setLabel('Số điện thoại: ')
+        $gia = new Zend_Form_Element_Text('gia');
+        $gia->setLabel('Giá: ')
                 ->setRequired(true)
                 ->addFilter('StripTags')
                 ->addFilter('StringTrim')
                 ->addValidator('NotEmpty')
                 ->setDecorators($elementDecoration);
         //address
-        $address = new Zend_Form_Element_Textarea('address');
-        $address->setLabel('Địa chỉ: ')
+        $hinhanh = new Zend_Form_Element_Text('hinhanh');
+        $hinhanh->setLabel('Hình ảnh: ')
                 ->setRequired(true)
                 ->addFilter('StripTags')
                 ->addFilter('StringTrim')
                 ->addValidator('NotEmpty')
-                ->setOptions(array(
-                    'rows' => '5',
-                    'cols' => '30',
-                ))
                 ->setDecorators($elementDecoration);
         //submit
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton')
         ->setDecorators($buttonDecoration);
         $this->setDecorators($formDecoration);
-        $this->addElements(array($id, $email, $pass, $name, $phone, $address, $submit));
+        $this->addElements(array($masanpham, $tensanpham, $thongtin, $gia, $hinhanh, $submit));
     }
 
 }

@@ -31,14 +31,24 @@ class Admin_Form_ThiepForm extends Zend_Form {
         $this->setname('thiep');
         //id
         //email
-        $masanpham = new Zend_Form_Element_Text('masanpham');
-        $masanpham->setLabel('Mã sản phẩm: ')
-                ->setRequired(true)
+//        $masanpham = new Zend_Form_Element_Text('masanpham');
+//        $masanpham->setLabel('Mã sản phẩm: ')
+//                ->setRequired(true)
+//                ->addFilter('StripTags')
+//                ->addFilter('StringTrim')
+//                ->addValidator('NotEmpty')
+//                ->setDecorators($elementDecoration);
+//        //pass
+        $masanpham = $this->createElement("text", "masanpham", array(
+            "label" => "Mã sản phẩm (*) ",
+        ));
+        $masanpham->setRequired(true)
                 ->addFilter('StripTags')
                 ->addFilter('StringTrim')
                 ->addValidator('NotEmpty')
                 ->setDecorators($elementDecoration);
-        //pass
+
+
         $tensanpham = new Zend_Form_Element_Text('tensanpham');
         $tensanpham->setLabel('Tên sản phẩm: ')
                 ->setRequired(true)
@@ -78,10 +88,9 @@ class Admin_Form_ThiepForm extends Zend_Form {
         //submit
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton')
-        ->setDecorators($buttonDecoration);
+                ->setDecorators($buttonDecoration);
         $this->setDecorators($formDecoration);
         $this->addElements(array($masanpham, $tensanpham, $thongtin, $gia, $hinhanh, $submit));
     }
 
 }
-
