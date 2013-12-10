@@ -16,7 +16,7 @@ class LichController extends Zend_Controller_Action {
     private $Table;
 
     public function init() {
-        $this->Table = new Admin_Model_Lich();
+        $this->Table = new Application_Model_Lich();
     }
 
     public function indexAction() {

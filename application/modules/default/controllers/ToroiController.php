@@ -16,7 +16,7 @@ class ToroiController extends Zend_Controller_Action {
     private $Table;
 
     public function init() {
-        $this->Table = new Admin_Model_Toroi();
+        $this->Table = new Application_Model_Toroi();
     }
 
     public function indexAction() {

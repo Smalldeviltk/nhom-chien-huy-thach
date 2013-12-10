@@ -16,7 +16,7 @@ class ThiepController extends Zend_Controller_Action {
     private $thiepTable;
 
     public function init() {
-        $this->thiepTable = new Admin_Model_Thiep();
+        $this->thiepTable = new Application_Model_Thiep();
     }
 
     public function indexAction() {

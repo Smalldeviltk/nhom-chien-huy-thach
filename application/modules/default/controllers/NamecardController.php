@@ -16,7 +16,7 @@ class NamecardController extends Zend_Controller_Action {
     private $Table;
 
     public function init() {
-        $this->Table = new Admin_Model_Namecard();
+        $this->Table = new Application_Model_Namecard();
     }
 
     public function indexAction() {
