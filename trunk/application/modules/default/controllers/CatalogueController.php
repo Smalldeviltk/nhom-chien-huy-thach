@@ -16,7 +16,7 @@ class CatalogueController extends Zend_Controller_Action {
     private $catalogueTable;
 
     public function init() {
-        $this->catalogueTable = new Admin_Model_Catalogue();
+        $this->catalogueTable = new Application_Model_Catalogue();
     }
 
     public function indexAction() {
