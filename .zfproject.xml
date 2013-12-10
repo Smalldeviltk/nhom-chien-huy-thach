@@ -17,11 +17,13 @@
       <formsDirectory>
         <formFile formName="Register"/>
         <formFile formName="Login"/>
+        <formFile formName="LienHe"/>
       </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory>
         <dbTableDirectory>
           <dbTableFile dbTableName="Customer"/>
+          <dbTableFile dbTableName="LienHe"/>
         </dbTableDirectory>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
