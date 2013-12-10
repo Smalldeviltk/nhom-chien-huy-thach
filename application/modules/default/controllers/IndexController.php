@@ -9,8 +9,6 @@ class IndexController extends Zend_Controller_Action {
     public function indexAction() {
 //        $thiep = new Application_Model_DbTable_Thiep();
 //        $this->view->thiep = $thiep->fetchAll();
-        $db = $this->getPluginResource('db')->getDbAdapter();
-        Zend_Registry::set('db', $db);
         
     }
 
