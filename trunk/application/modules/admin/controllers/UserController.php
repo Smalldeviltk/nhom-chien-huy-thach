@@ -16,16 +16,10 @@ class Admin_UserController extends Zend_Controller_Action {
     private $muser;
 
     public function init() {
-        $this->muser = new Admin_Model_User;
+        $this->muser = new Application_Model_User;
     }
 
     public function indexAction() {
-//        if (isset($_GET['ct']) && !empty($_GET['id'])) {//sua
-//            $userSelect = $this->userTbl->listUser("id = '" . $_GET['id'] . "'");
-//        } else {
-//            $userSelect = $this->userTbl->listUser();
-//        }
-//        $this->view->data = $userSelect;
         //xu ly phan trang
         $adapter = new Zend_Paginator_Adapter_DbSelect($this->muser->listUser());
         $paginator = new Zend_Paginator($adapter);
@@ -45,8 +39,8 @@ class Admin_UserController extends Zend_Controller_Action {
     
     public function addAction() {
         if (isset($_GET['edit']) && !empty($_GET['id'])) {//sua
-            $form = new Admin_Form_UserForm();
-            $form->submit->setLabel('Update sản phẩm');
+            $form = new Application_Form_UserForm();
+            $form->submit->setLabel('Update');
             $this->view->form = $form;
             $thiep = $this->muser->fetchThiep($_GET['id']);
             $id = $_GET['id'];
@@ -57,15 +51,15 @@ class Admin_UserController extends Zend_Controller_Action {
                     $username = $this->getRequest()->getPost('username');
                     $password = $this->getRequest()->getPost('password');
                     $level = $this->getRequest()->getPost('level');
-                    $this->thiepTable->updateThiep($username, $password, $level);
+                    $this->muser->updateThiep($username, $password, $level, $id);
                     $this->_forward('index', 'user', 'admin');
                 } else {
                     $form->populate($formData);
                 }
             }
         } else {
-            $form = new Admin_Form_UserForm();
-            $form->submit->setLabel('Thêm sản phẩm');
+            $form = new Application_Form_UserForm();
+            $form->submit->setLabel('Add');
             $this->view->form = $form;
 
             if ($this->getRequest()->isPost()) {

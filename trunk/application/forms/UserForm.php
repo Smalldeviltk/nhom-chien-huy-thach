@@ -40,7 +40,7 @@ class Application_Form_UserForm extends Zend_Form {
 //                ->setDecorators($elementDecoration);
 //        //pass
         $username = $this->createElement("text", "username", array(
-            "label" => "User Name (*) ",
+            "label" => "User name (*) ",
         ));
         $username->setRequired(true)
                 ->addFilter('StripTags')
@@ -50,7 +50,7 @@ class Application_Form_UserForm extends Zend_Form {
 
 
         $password = new Zend_Form_Element_Password('password');
-        $password->setLabel('Password (*) ')
+        $password->setLabel('Mật khẩu (*) ')
                 ->setRequired(true)
                 ->addFilter('StripTags')
                 ->addFilter('StringTrim')
@@ -59,18 +59,19 @@ class Application_Form_UserForm extends Zend_Form {
 
         //name
         $level = new Zend_Form_Element_Text('level');
-        $level->setLabel('Level ')
+        $level->setLabel('Cấp độ (*) ')
                 ->setRequired(true)
                 ->addFilter('StripTags')
                 ->addFilter('StringTrim')
                 ->addValidator('NotEmpty')
                 ->setDecorators($elementDecoration);
+        //sdt
         //submit
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton')
                 ->setDecorators($buttonDecoration);
         $this->setDecorators($formDecoration);
-        $this->addElements(array($username, $password, $level));
+        $this->addElements(array($username, $password, $level, $submit));
     }
 
 }

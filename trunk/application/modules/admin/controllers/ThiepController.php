@@ -18,7 +18,7 @@ class Admin_ThiepController extends Zend_Controller_Action {
 
     public function init() {
         $this->thiepTable = new Application_Model_Thiep();
-        $this->thiepForm = new Admin_Form_ThiepForm();
+        $this->thiepForm = new Application_Form_ThiepForm();
     }
 
     public function indexAction() {
@@ -45,12 +45,6 @@ class Admin_ThiepController extends Zend_Controller_Action {
             $thiep = $this->thiepTable->fetchThiep($_GET['id']);
             $id = $_GET['id'];
             $this->view->masp = $thiep['masanpham'];
-            //$this->form->getElement('masanpham')->setValue($thiep['masanpham']);
-//            $this->form->getElement('tensanpham')->setValue($thiep['tensanpham']);
-//            $this->form->getElement('thongtin')->setValue($thiep['thongtin']);
-//            $this->form->getElement('gia')->setValue($thiep['gia']);
-//            //$this->form->getElement('cbbRole')->setValue($user['quyen']);
-//            $this->form->getElement('hinhanh')->setValue($thiep['hinhanh']);
             if ($this->getRequest()->isPost()) {
                 $formData = $this->getRequest()->getPost();
                 if ($form->isValid($formData)) {
@@ -66,7 +60,7 @@ class Admin_ThiepController extends Zend_Controller_Action {
                 }
             }
         } else {
-            $form = new Admin_Form_ThiepForm();
+            $form = new Application_Form_ThiepForm();
             $form->submit->setLabel('Thêm sản phẩm');
             $this->view->form = $form;
 

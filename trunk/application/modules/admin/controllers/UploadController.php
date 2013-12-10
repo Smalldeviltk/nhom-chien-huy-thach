@@ -15,10 +15,10 @@ class Admin_UploadController extends Zend_Controller_Action {
 
     //put your code here
     public function indexAction() {
-        $form = new Admin_Form_File;
+        $form = new Application_Form_File;
 
         if ($this->_request->isPost()) {
-            $upload = new Admin_Form_UploadFile_UploadFile;
+            $upload = new Application_Form_UploadFile_UploadFile;
             $files = $upload->_upload->getFileInfo();
             foreach ($files as $file => $info) {
                 if (!$upload->_upload->isUploaded($file)) {

@@ -17,8 +17,8 @@ class Admin_ToroiController extends Zend_Controller_Action {
     private $thiepForm;
 
     public function init() {
-        $this->thiepTable = new Admin_Model_Toroi();
-        $this->thiepForm = new Admin_Form_ThiepForm();
+        $this->thiepTable = new Application_Model_Toroi();
+        $this->thiepForm = new Application_Form_ThiepForm();
     }
 
     public function indexAction() {
@@ -39,7 +39,7 @@ class Admin_ToroiController extends Zend_Controller_Action {
 
     public function addAction() {
         if (isset($_GET['edit']) && !empty($_GET['id'])) {//sua
-            $form = new Admin_Form_ThiepForm();
+            $form = new Application_Form_ThiepForm();
             $form->submit->setLabel('Update sản phẩm');
             $this->view->form = $form;
             $thiep = $this->thiepTable->fetchThiep($_GET['id']);
@@ -60,7 +60,7 @@ class Admin_ToroiController extends Zend_Controller_Action {
                 }
             }
         } else {
-            $form = new Admin_Form_ThiepForm();
+            $form = new Application_Form_ThiepForm();
             $form->submit->setLabel('Thêm sản phẩm');
             $this->view->form = $form;
 
