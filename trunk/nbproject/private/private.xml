@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/forms/Register.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/controllers/ThiepController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/views/scripts/index/view.phtml</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/controllers/IndexController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/forms/Login.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/forms/ThiepForm.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/models/User.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/forms/UserForm.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/forms/LienHe.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/forms/File.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/controllers/PublicController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/models/LienHe.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/controllers/ThiepController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/views/scripts/index/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/views/scripts/lich/detail.phtml</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/models/Thiep.php</file>
+            <file>file:/C:/xampp/htdocs/08/.htaccess</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/models/Thiep.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/views/scripts/index/register.phtml</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/controllers/CatalogueController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/controllers/AboutController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/controllers/ContactController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/forms/LienHeForm.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/views/scripts/index/login.phtml</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/views/scripts/contact/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/views/scripts/about/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/controllers/ToroiController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/views/scripts/lich/index.phtml</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/default/controllers/NamecardController.php</file>
+            <file>file:/C:/xampp/htdocs/08/application/modules/admin/controllers/UserController.php</file>
+        </group>
+    </open-files>
+</project-private>
