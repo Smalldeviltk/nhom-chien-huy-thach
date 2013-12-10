@@ -212,6 +212,17 @@ INSERT INTO `user` (`id`, `username`, `password`, `level`) VALUES
 (4, 'jacky', '12345', 1),
 (5, 'Lena', '12345', 1);
 
+
+
+CREATE TABLE IF NOT EXISTS `lienhe` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hoten` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `sdt` varchar(100) NOT NULL,
+  `diachi` varchar(100) NOT NULL,
+  `noidung` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+);
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
