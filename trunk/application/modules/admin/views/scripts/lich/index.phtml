@@ -86,45 +86,52 @@
                         </ul>
                     </section>
                     <section class="span8">
-                        <table id="p_post">
-                            <thead>
-                                <tr>
-                                    <th class="col-4-user">Mã sản phẩm</th>
-                                    <th class="col-5-user">Tên sản phẩm</th>
-                                    <th class="col-6-user">Thông tin</th>
-                                    <th class="col-7-user">Giá</th> 
-                                    <th class="col-3-user">Hình ảnh</th> 
-                                </tr>
-                            </thead>
-                            <tbody>
+                        <h3><a href="<?php echo $this->baseUrl('/admin/lich/add'); ?>">Add product</a></h3>
+                        <?php if ($this->data != null) { ?>
+                            <table id="p_post">
+                                <thead>
+                                    <tr>
+                                        <th class="col-4-user">Mã sản phẩm</th>
+                                        <th class="col-5-user">Tên sản phẩm</th>
+                                        <th class="col-6-user">Thông tin</th>
+                                        <th class="col-7-user">Giá</th> 
+                                        <th class="col-3-user">Hình ảnh</th> 
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    foreach ($this->data as $user) {
+                                        ?>    
+                                        <tr> 
+                                            <th class="col-4-user"><?php echo $user['masanpham']; ?></th>
+                                            <th class="col-5-user"><?php echo $user['tensanpham']; ?>
+                                    <div class="row_action">
+                                        <span class="row_edit">
+                                            <a href="<?php echo $this->baseUrl('/admin/lich/add?edit&id=' . $user['id']) ?>">Sửa</a>
+                                        </span>
+                                        <span class="row_del">
+                                            <a href="<?php echo $this->baseUrl('/admin/lich/delete/?del&id=' . $user['id']); ?>">Xóa</a>
+                                        </span>                        
+                                    </div>
+                                    </th>
+                                    <th class="col-6-user"><?php echo $user['thongtin']; ?></th>
+                                    <th class="col-7-user"><?php echo $user['gia']; ?></th>
+                                    </tr>                                          
+                                    <?php
+                                }
+                                ?>             
+                                </tbody>
+                            </table>
+                            <center>
                                 <?php
-                                foreach ($this->data as $user) {
-                                    ?>    
-                                    <tr> 
-                                        <th class="col-4-user"><?php echo $user['masanpham']; ?></th>
-                                        <th class="col-5-user"><?php echo $user['tensanpham']; ?>
-                                <div class="row_action">
-                                    <span class="row_edit">
-                                        <a href="<?php echo $this->baseUrl('/admin/lich/add?edit&id=' . $user['id']) ?>">Sửa</a>
-                                    </span>
-                                    <span class="row_del">
-                                        <a href="<?php echo $this->baseUrl('/admin/lich/delete/?del&id=' . $user['id']); ?>">Xóa</a>
-                                    </span>                        
-                                </div>
-                                </th>
-                                <th class="col-6-user"><?php echo $user['thongtin']; ?></th>
-                                <th class="col-7-user"><?php echo $user['gia']; ?></th>
-                                </tr>                                          
-                                <?php
-                            }
-                            ?>             
-                            </tbody>
-                        </table>
-                        <center>
+                                echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
+                                ?>
+                            </center>
                             <?php
-                            echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
-                            ?>
-                        </center>
+                        } else {
+                            echo 'No products';
+                        }
+                        ?>
                     </section>
                 </article>
             </div>
