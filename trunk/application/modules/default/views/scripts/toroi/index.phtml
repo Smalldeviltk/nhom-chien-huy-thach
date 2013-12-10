@@ -91,28 +91,34 @@
                     <section class="span8">
                         <div>
                             <?php
-                            foreach ($this->data as $thiep) {
-                                ?>    
-                                <!-- Product -->
+                            if ($this->data != null) {
+                                foreach ($this->data as $thiep) {
+                                    ?>    
+                                    <!-- Product -->
 
-                                <!---->
-                                <div class="item_product">
-                                    <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $thiep['hinhanh']; ?>" border="0"></a></div>  
-                                    <div style="height:10px; width:100%;"></div>
-                                    <div class="name"><a href="<?php echo $this->baseUrl('/toroi/detail?ctsp&id=' . $thiep['id'])
-                                ?>"><?php echo $thiep['tensanpham']; ?></a></div>       
-                                </div>
-                                <?php
-                            }
-                            ?>
-                        </div>
-                        <section class="span8">
-                            <div align = "center">
-                                <?php
-                                echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
+                                    <!---->
+                                    <div class="item_product">
+                                        <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $thiep['hinhanh']; ?>" border="0"></a></div>  
+                                        <div style="height:10px; width:100%;"></div>
+                                        <div class="name"><a href="<?php echo $this->baseUrl('/toroi/detail?ctsp&id=' . $thiep['id'])
+                                    ?>"><?php echo $thiep['tensanpham']; ?></a></div>       
+                                    </div>
+                                    <?php
+                                }
                                 ?>
                             </div>
-                        </section>
+                            <section class="span8">
+                                <div align = "center">
+                                    <?php
+                                    echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
+                                    ?>
+                                </div>
+                            </section>
+                            <?php
+                        } else {
+                            echo 'No products';
+                        }
+                        ?>
                     </section>
                 </article>
             </div>
