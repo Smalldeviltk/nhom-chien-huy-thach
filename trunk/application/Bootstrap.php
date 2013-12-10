@@ -17,15 +17,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 //        $db->query("SET CHARACTER SET 'utf8'");
 //
 //        Zend_Registry::set('connectDB', $db);
-
-        $db->query("CREATE TABLE IF NOT EXISTS `usersss` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL,
-  `password` char(32) NOT NULL,
-  `level` int(1) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-)");
-
         //Khi thiet lap che do nay model moi co the su dung duoc
 //        Zend_Db_Table::setDefaultAdapter($db);
 //        // Return it, so that it can be stored by the bootstrap
