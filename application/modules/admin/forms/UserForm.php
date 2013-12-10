@@ -29,16 +29,6 @@ class Admin_Form_UserForm extends Zend_Form {
 
 
         $this->setname('user');
-        //id
-        //email
-//        $masanpham = new Zend_Form_Element_Text('masanpham');
-//        $masanpham->setLabel('Mã sản phẩm: ')
-//                ->setRequired(true)
-//                ->addFilter('StripTags')
-//                ->addFilter('StringTrim')
-//                ->addValidator('NotEmpty')
-//                ->setDecorators($elementDecoration);
-//        //pass
         $username = $this->createElement("text", "username", array(
             "label" => "User Name (*) ",
         ));

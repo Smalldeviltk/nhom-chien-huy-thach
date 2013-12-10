@@ -29,6 +29,10 @@ class Application_Model_User extends Zend_Db_Table_Abstract {
         $data = $this->fetchall($query);
         return $query;
     }
+    
+       function fetchThiep($id) {
+        return $this->fetchRow("id = '" . $id . "'");
+    }
 
     public function detailUser($where = null, $auth = null) {
         $query = $this->select();
@@ -52,7 +56,7 @@ class Application_Model_User extends Zend_Db_Table_Abstract {
         $this->delete($where);
     }
 
-    public function updateThiep($username, $password, $level) {
+    public function updateThiep($username, $password, $level, $id) {
         $where = "id=" . $id;
         $data = array(
             'username' => $username,
