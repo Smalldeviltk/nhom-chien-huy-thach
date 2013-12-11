@@ -11,19 +11,22 @@ class Admin_IndexController extends Zend_Controller_Action {
     public function logoutAction() {
         Zend_Auth::getInstance()->clearIdentity();
     }
-    
+
     public function installAction() {
-//        $thiep = new Application_Model_DbTable_Thiep();
-//        $this->view->thiep = $thiep->fetchAll();
-		$db = Zend_Db_Table::getDefaultAdapter();
-		$db->query("CREATE TABLE IF NOT EXISTS `user` (
+        $db = Zend_Db_Table::getDefaultAdapter();
+//        $db->query("DROP TABLE toroi");
+//        $db->query("DROP TABLE thiep");
+//        $db->query("DROP TABLE namecard");
+//        $db->query("DROP TABLE catalogue");
+//        $db->query("DROP TABLE lich");
+        $db->query("CREATE TABLE IF NOT EXISTS `user` (
 		`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 		`username` varchar(50) NOT NULL,
 		`password` char(32) NOT NULL,
 		`level` int(1) NOT NULL DEFAULT '1',
 		PRIMARY KEY (`id`)
 		)");
-		$db->query("CREATE TABLE IF NOT EXISTS `toroi` (
+        $db->query("CREATE TABLE IF NOT EXISTS `toroi` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`hinhanh` text,
 		`masanpham` text NOT NULL,
@@ -32,7 +35,7 @@ class Admin_IndexController extends Zend_Controller_Action {
 		`gia` text,
 		PRIMARY KEY (`id`)
 		)");
-		$db->query("CREATE TABLE IF NOT EXISTS `thiep` (
+        $db->query("CREATE TABLE IF NOT EXISTS `thiep` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`hinhanh` text,
 		`masanpham` text NOT NULL,
@@ -41,13 +44,7 @@ class Admin_IndexController extends Zend_Controller_Action {
 		`gia` text,
 		PRIMARY KEY (`id`)
 		)");
-                $db->query("INSERT INTO `thiep` ( `hinhanh`, `masanpham`, `tensanpham`, `thongtin`, `gia`) VALUES
-		('MAU_1.jpg', 'SP 01', 'Mau thiep so 1', 'thong tin chi day', '5000'),
-		('MAU_1.jpg', 'Sp02', 'sáº£n pháº©m sá»‘ 2', 'cai cc', '10000'),
-		('MAU_1.jpg', 'sp03', 'San pham so 3', 'cai con cat', '100000'),
-		('MAU_1.jpg', 'sp04', 'san pham so 4', 'tÃ¢sfdas', '12312321'),
-		('MAU_1.jpg', 'Sp05', 'Sáº£n pháº©m sá»‘ 5', 'tttt', '5000');");
-		$db->query("CREATE TABLE IF NOT EXISTS `namecard` (
+        $db->query("CREATE TABLE IF NOT EXISTS `namecard` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`hinhanh` text,
 		`masanpham` text NOT NULL,
@@ -56,7 +53,7 @@ class Admin_IndexController extends Zend_Controller_Action {
 		`gia` text,
 		PRIMARY KEY (`id`)
 		)");
-		$db->query("CREATE TABLE IF NOT EXISTS `lich` (
+        $db->query("CREATE TABLE IF NOT EXISTS `lich` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`hinhanh` text,
 		`masanpham` text NOT NULL,
@@ -65,7 +62,7 @@ class Admin_IndexController extends Zend_Controller_Action {
 		`gia` text,
 		PRIMARY KEY (`id`)
 		)");
-		$db->query("CREATE TABLE IF NOT EXISTS `catalogue` (
+        $db->query("CREATE TABLE IF NOT EXISTS `catalogue` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`hinhanh` text,
 		`masanpham` text NOT NULL,
@@ -74,7 +71,16 @@ class Admin_IndexController extends Zend_Controller_Action {
 		`gia` text,
 		PRIMARY KEY (`id`)
 		)");
-		$this->_redirect('/admin');
+        $db->query("CREATE TABLE IF NOT EXISTS `lienhe` (
+                `id` int(11) NOT NULL AUTO_INCREMENT,
+                `hoten` varchar(100) NOT NULL,
+                `email` varchar(100) NOT NULL,
+                `sdt` varchar(100) NOT NULL,
+                `diachi` varchar(100) NOT NULL,
+                `noidung` varchar(100) NOT NULL,
+                PRIMARY KEY (`id`)
+		)");
+        $this->_redirect('/admin');
     }
 
 }
