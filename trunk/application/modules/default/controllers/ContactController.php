@@ -20,7 +20,7 @@ class ContactController extends Zend_Controller_Action {
                 $sdt = $formLienHe->getValue('sdt');
                 $diachi = $formLienHe->getValue('diachi');
                 $noidung = $formLienHe->getValue('noidung');
-                $lienhe=new Default_Model_LienHe();
+                $lienhe=new Application_Model_LienHe();
                 $lienhe->Them($email, $hoten, $sdt, $diachi, $noidung);
                 header ("Location: http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])."/index.php");
             } else {
