@@ -12,7 +12,7 @@
                     <div class="container">
                         <ul class="nav">
                             <div class="btn-group">
-                                <a class="btn dropdown-menu" href ="<?php echo $this->baseUrl() . "/admin" ?>" style="font-weight: bold;"><i class="icon-home"></i> Admin Bar <span ></span></a>
+                                <a class="btn dropdown-menu" href ="<?php echo $this->baseUrl() . "/" ?>" style="font-weight: bold;"><i class="icon-home"></i> Trang chủ <span ></span></a>
                             </div>
                             <div class="btn-group">
                                 <a data-toggle="dropdown" data-hover="dropdown" class="btn dropdown-toggle" style="font-weight: bold;"><i class="icon-ok"></i> Giới thiệu <span class="caret"></span></a>
@@ -27,15 +27,15 @@
                             <div class="btn-group">
                                 <a  data-hover="dropdown" class="btn dropdown-toggle" style="font-weight: bold;"><i class="icon-gift "></i> Sản Phẩm <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>thiep">Thiệp</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>thiep">Thiệp</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>lich">Lịch</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>lich">Lịch</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>catalogue">Catalogue</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>catalogue">Catalogue</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>namecard">Name card</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>namecard">Name card</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>toroi">Tờ rơi</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>toroi">Tờ rơi</a></li>
                                 </ul>
                             </div>
                             <div class="btn-group">
@@ -52,39 +52,19 @@
                 <article class="row">
                     <section class="span22">
                         <ul class="nav nav-list bg-list">
-                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Số lượt truy cập</h6></li>
-                            <li align="center"><h1><img src="http://cc.amazingcounters.com/counter.php?i=3153335&c=9460318"></h1></li>
-                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Danh mục sản phẩm</h6></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>thiep">Thiệp</a></li>
+                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Quản lý sản phẩm</h6></li>
+                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>thiep">Thiệp</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>lich">Lịch</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>catalogue">Catalogue</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>namecard">Name card</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>toroi">Tờ rơi</a></li>
+                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Hình ảnh!</h6></li>
+                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>upload">Upload ảnh</a></li>
                             <li class="divider"></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>lich">Lịch</a></li>
-                            <li class="divider"></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>catalogue">Catalogue</a></li>
-                            <li class="divider"></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>namecard">Name card</a></li>
-                            <li class="divider"></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>toroi">Tờ rơi</a></li>
-                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Hỗ trợ trực tuyến!</h6></li>
-                            <li>
-                                <a href="ymsgr:sendIM?yeuem1000nam_1991">Lê Phước Thạch</a>
-                                <a href="ymsgr:sendIM?yeuem1000nam_1991">
-                                    <img src="http://opi.yahoo.com/online?u=yeuem1000nam_1991&t=14">
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="ymsgr:sendIM?visaoemoi_03tk">Nguyễn Văn Chiến</a>
-                                <a href="ymsgr:sendIM?visaoemoi_03tk">
-                                    <img src="http://opi.yahoo.com/online?u=visaoemoi_03tk&t=14">
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="ymsgr:sendIM?kimcuongcatkimcuong_12">Lâm Văn Quốc Huy</a>
-                                <a href="ymsgr:sendIM?kimcuongcatkimcuong_12">
-                                    <img src="http://opi.yahoo.com/online?u=kimcuongcatkimcuong_12&t=14">
-                                </a>
-                            </li>
                         </ul>
                     </section>
                     <section class="span8">

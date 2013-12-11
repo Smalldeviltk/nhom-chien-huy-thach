@@ -10,7 +10,7 @@
                     <div class="container">
                         <ul class="nav">
                             <div class="btn-group">
-                                <a class="btn dropdown-menu" href ="<?php echo $this->baseUrl() . "/admin" ?>" style="font-weight: bold;"><i class="icon-home"></i> Admin Bar <span ></span></a>
+                                <a class="btn dropdown-menu" href ="<?php echo $this->baseUrl() . "/" ?>" style="font-weight: bold;"><i class="icon-home"></i> Trang chủ <span ></span></a>
                             </div>
                             <div class="btn-group">
                                 <a data-toggle="dropdown" data-hover="dropdown" class="btn dropdown-toggle" style="font-weight: bold;"><i class="icon-ok"></i> Giới thiệu <span class="caret"></span></a>
@@ -25,15 +25,15 @@
                             <div class="btn-group">
                                 <a  data-hover="dropdown" class="btn dropdown-toggle" style="font-weight: bold;"><i class="icon-gift "></i> Sản Phẩm <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>thiep">Thiệp</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>thiep">Thiệp</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>lich">Lịch</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>lich">Lịch</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>catalogue">Catalogue</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>catalogue">Catalogue</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>namecard">Name card</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>namecard">Name card</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>toroi">Tờ rơi</a></li>
+                                    <li><a href="<?php echo $this->baseUrl() . "/"; ?>toroi">Tờ rơi</a></li>
                                 </ul>
                             </div>
                             <div class="btn-group">
@@ -50,92 +50,80 @@
                 <article class="row">
                     <section class="span22">
                         <ul class="nav nav-list bg-list">
-                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Số lượt truy cập</h6></li>
-                            <li align="center"><h1><img src="http://cc.amazingcounters.com/counter.php?i=3153335&c=9460318"></h1></li>
-                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Danh mục sản phẩm</h6></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>thiep">Thiệp</a></li>
+                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Quản lý sản phẩm</h6></li>
+                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>thiep">Thiệp</a></li>
                             <li class="divider"></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>lich">Lịch</a></li>
+                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>lich">Lịch</a></li>
                             <li class="divider"></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>catalogue">Catalogue</a></li>
+                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>catalogue">Catalogue</a></li>
                             <li class="divider"></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>namecard">Name card</a></li>
+                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>namecard">Name card</a></li>
                             <li class="divider"></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/"; ?>toroi">Tờ rơi</a></li>
-                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Hỗ trợ trực tuyến!</h6></li>
-                            <li>
-                                <a href="ymsgr:sendIM?yeuem1000nam_1991">Lê Phước Thạch</a>
-                                <a href="ymsgr:sendIM?yeuem1000nam_1991">
-                                    <img src="http://opi.yahoo.com/online?u=yeuem1000nam_1991&t=14">
-                                </a>
-                            </li>
+                            <li class="active"><a href="<?php echo $this->baseUrl() . "/admin/"; ?>toroi">Tờ rơi</a></li>
                             <li class="divider"></li>
-                            <li>
-                                <a href="ymsgr:sendIM?visaoemoi_03tk">Nguyễn Văn Chiến</a>
-                                <a href="ymsgr:sendIM?visaoemoi_03tk">
-                                    <img src="http://opi.yahoo.com/online?u=visaoemoi_03tk&t=14">
-                                </a>
-                            </li>
+                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>user">User</a></li>
+                            <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Hình ảnh!</h6></li>
+                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>upload">Upload ảnh</a></li>
                             <li class="divider"></li>
-                            <li>
-                                <a href="ymsgr:sendIM?kimcuongcatkimcuong_12">Lâm Văn Quốc Huy</a>
-                                <a href="ymsgr:sendIM?kimcuongcatkimcuong_12">
-                                    <img src="http://opi.yahoo.com/online?u=kimcuongcatkimcuong_12&t=14">
-                                </a>
-                            </li>
                         </ul>
                     </section>
                     <br>
                     <a class="pull-right" href ="<?php echo $this->baseUrl() . "/admin/toroi/" ?>add" style="font-weight: bold;"> Thêm sản phẩm </a>
                     <br>
-                    <section class="span8">
-                        <h3><a href="<?php echo $this->baseUrl('/admin/toroi/add'); ?>">Add product</a></h3>
-                        <?php if ($this->data != null) { ?>
-                            <table id="p_post">
-                                <thead>
-                                    <tr>
-                                        <th class="col-4-user">Mã sản phẩm</th>
-                                        <th class="col-5-user">Tên sản phẩm</th>
-                                        <th class="col-6-user">Thông tin</th>
-                                        <th class="col-7-user">Giá</th> 
-                                        <th class="col-3-user">Hình ảnh</th> 
-                                    </tr>
-                                </thead>
-                                <tbody>
+                    <center>
+                        <h3>Tờ rơi</h3>
+                        <section class="span8">               
+                            <?php if ($this->data != null) { ?>
+                                <table id="p_post" border="1">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-4-user">Mã</th>
+                                            <th class="col-5-user">Tên sản phẩm</th>
+                                            <th class="col-6-user">Thông tin</th>
+                                            <th class="col-7-user">Giá</th> 
+                                            <th class="col-3-user">Hình ảnh</th> 
+                                            <th class="col-3-user">Control</th> 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        foreach ($this->data as $user) {
+                                            ?>    
+                                            <tr> 
+                                                <th class="col-4-user"><?php echo $user['masanpham']; ?></th>
+                                                <th class="col-5-user"><?php echo $user['tensanpham']; ?>
+                                                </th>
+                                                <th width="300" style="display:block; overflow:scroll" class="col-6-user"><?php echo $user['thongtin']; ?></th>
+                                                <th class="col-7-user"><?php echo $user['gia']; ?></th>
+                                                <th class="col-7-user"><?php echo $user['hinhanh']; ?></th>
+                                                <th>
+                                        <div class="row_action">
+                                            <span class="row_edit">
+                                                <a href="<?php echo $this->baseUrl('/admin/toroi/add?edit&id=' . $user['id']) ?>">Sửa</a>
+                                            </span>
+                                            <span class="row_del">
+                                                <a href="<?php echo $this->baseUrl('/admin/toroi/delete/?del&id=' . $user['id']); ?>">Xóa</a>
+                                            </span>                        
+                                        </div>
+                                        </th>
+                                        </tr>                                          
+                                        <?php
+                                    }
+                                    ?>             
+                                    </tbody>
+                                </table>
+                                <center>
                                     <?php
-                                    foreach ($this->data as $user) {
-                                        ?>    
-                                        <tr> 
-                                            <th class="col-4-user"><?php echo $user['masanpham']; ?></th>
-                                            <th class="col-5-user"><?php echo $user['tensanpham']; ?>
-                                    <div class="row_action">
-                                        <span class="row_edit">
-                                            <a href="<?php echo $this->baseUrl('/admin/toroi/add?edit&id=' . $user['id']) ?>">Sửa</a>
-                                        </span>
-                                        <span class="row_del">
-                                            <a href="<?php echo $this->baseUrl('/admin/toroi/delete/?del&id=' . $user['id']); ?>">Xóa</a>
-                                        </span>                        
-                                    </div>
-                                    </th>
-                                    <th class="col-6-user"><?php echo $user['thongtin']; ?></th>
-                                    <th class="col-7-user"><?php echo $user['gia']; ?></th>
-                                    </tr>                                          
-                                    <?php
-                                }
-                                ?>             
-                                </tbody>
-                            </table>
-                            <center>
+                                    echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
+                                    ?>
+                                </center>
                                 <?php
-                                echo $this->paginationControl($this->data, 'Sliding', 'paginator.phtml');
-                                ?>
-                            </center>
-                            <?php
-                        } else {
-                            echo 'No products';
-                        }
-                        ?>
-                    </section>
+                            } else {
+                                echo 'No products';
+                            }
+                            ?>
+                        </section>
+                    </center>
                 </article>
             </div>
         </div>
