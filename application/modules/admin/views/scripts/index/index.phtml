@@ -51,7 +51,7 @@
                     <section class="span22">
                         <ul class="nav nav-list bg-list">
                             <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Quản lý sản phẩm</h6></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>thiep">Thiệp</a></li>
+                            <p><li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>thiep">Thiệp</a></li></p>
                             <li class="divider"></li>
                             <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>lich">Lịch</a></li>
                             <li class="divider"></li>
@@ -63,16 +63,15 @@
                             <li class="divider"></li>
                             <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>user">User</a></li>
                             <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Hình ảnh!</h6></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>upload">Upload ảnh</a></li>
-                            <li class="divider"></li>
+                            <p><li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>upload">Upload ảnh</a></li></p>
                             <li class="nav-header bg-menu-title" align="center"><h6 style="color: black;">Khách hàng liên hệ</h6></li>
-                            <li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>lienhe">Chi tiết</a></li>
-                            <li class="divider"></li>
+                            <p><li><a href="<?php echo $this->baseUrl() . "/admin/"; ?>lienhe">Chi tiết</a></li></p>
                         </ul>
                     </section>
                     <section class="span8">
-                        Hi <?php echo $this->fullName; ?>!
-                        <br></br>
+                        <br>
+                        <h4>Hi <?php echo $this->fullName; ?>!</h4>
+                        <br>
                         <a href="<?php echo $this->baseUrl("/admin/index/logout"); ?>">Logout</a>
                     </section>
                 </article>
