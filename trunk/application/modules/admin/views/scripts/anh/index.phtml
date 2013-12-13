@@ -73,30 +73,26 @@
                     </section>
                     <section class="span8">
                         <center>
+                            <h3>Danh sách ảnh</h3>
                             <div>
-                            <?php
-                            define('PATH', APPLICATION_PATH . '/../upload/image'); // Khai báo đường đẫn đến thư mục
-                            $files = array();
-                            $dir = opendir(PATH);
-                            while ($f = readdir($dir)) {
-                                if (eregi("\.jpg|\.gif|\.png", $f))
-                                    array_push($files, $f);
-                            }
-                            closedir($dir);
-                            $data = array();
-                            if (!empty($files)) {
-                                foreach ($files as $k => $v) {
-
+                                <?php
+                                if (!empty($this->files)) {
+                                    foreach ($this->files as $k => $v) {
                                         ?>    
-                                        <div class="item_product">
-                                            <div class="images"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $v; ?>" border="0"></a></div>  
-                                            <div style="height:10px; width:100%;"></div>  
+                                        <div class="item_product1">
+                                            <div class="images1"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $v; ?>" border="0"></a></div>  
                                             <div class="name"><a><?php echo $v ?></a></div> 
                                         </div>
                                         <?php
                                     }
                                     ?>
+                                    <center>
+                                        <?php
+                                        echo $this->paginationControl($this->files, 'Sliding', 'paginator.phtml');
+                                        ?>
+                                    </center>
                                 </div>
+
                                 <?php
                             } else {
                                 echo 'No products';
