@@ -75,22 +75,28 @@
                         <center>
                             <h3>Danh sách ảnh</h3>
                             <div>
-                                <?php
-                                if (!empty($this->files)) {
-                                    foreach ($this->files as $k => $v) {
-                                        ?>    
-                                        <div class="item_product1">
-                                            <div class="images1"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $v; ?>" border="0"></a></div>  
-                                            <div class="name"><a><?php echo $v ?></a></div> 
-                                        </div>
+                                <center><section class="span8">
                                         <?php
-                                    }
-                                    ?>
-                                    <center>
-                                        <?php
-                                        echo $this->paginationControl($this->files, 'Sliding', 'paginator.phtml');
-                                        ?>
-                                    </center>
+                                        if (!empty($this->files)) {
+                                            foreach ($this->files as $k => $v) {
+                                                ?>    
+                                                <div class="item_product1">
+                                                    <div class="images1"><a href="#"><img src="<?php echo $this->baseUrl() . "/"; ?>upload/image/<?php echo $v; ?>" border="0"></a></div>  
+                                                    <div class="name"><a><?php echo $v ?></a></div> 
+                                                </div>
+                                                <?php
+                                            }
+                                            ?>
+
+                                        </section></center>
+
+                                    <section class="span8">
+                                        <center>
+                                            <?php
+                                            echo $this->paginationControl($this->files, 'Sliding', 'paginator.phtml');
+                                            ?>
+                                        </center>
+                                    </section>
                                 </div>
 
                                 <?php
