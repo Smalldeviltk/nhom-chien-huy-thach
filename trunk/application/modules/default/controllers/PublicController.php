@@ -18,9 +18,7 @@ class PublicController extends Zend_Controller_Action {
                     //dang nhap thanh cong
                     
                     $this->_redirect('/admin');
-                } else {
-                    $this->_redirect('/default');
-                }
+                } 
         }
     }
 
