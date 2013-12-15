@@ -86,20 +86,22 @@
                         </ul>
                     </section>
                     <section class="span8">
-                        <?php
-                        $username = $this->formText('username', '', array('style' => 'width: 150px'));
-                        $password = $this->formPassword('password', '', array('style' => 'width: 150px'));
-                        $btnButton = $this->formSubmit('submit', 'Login');
-                        ?>
-                        <h2>loginAction</h2>
-                        <form id="appForm" action="" method="POST" enctype="multipart/form-data">
-                            Username: <?php echo $username; ?>
-                            <br></br>
-                            Password: <?php echo $password; ?>
-                            <br></br>
-                            <?php echo $btnButton; ?>
+                        <center>
+                            <?php
+                            $username = $this->formText('username', '', array('style' => 'width: 150px'));
+                            $password = $this->formPassword('password', '', array('style' => 'width: 150px'));
+                            $btnButton = $this->formSubmit('submit', 'Login');
+                            ?>
+                            <h2>Login</h2>
+                            <form id="appForm" action="" method="POST" enctype="multipart/form-data">
+                                Username: <?php echo $username; ?>
+                                <br></br>
+                                Password: <?php echo $password; ?>
+                                <br></br>
+                                <?php echo $btnButton; ?>
 
-                        </form>
+                            </form>
+                        </center>
                     </section>
                 </article>
             </div>
