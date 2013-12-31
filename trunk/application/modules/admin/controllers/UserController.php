@@ -68,7 +68,7 @@ class Admin_UserController extends Zend_Controller_Action {
                     $username = $this->getRequest()->getPost('username');
                     $password = $this->getRequest()->getPost('password');
                     $level = $this->getRequest()->getPost('level');
-                    $this->muser->updateThiep($username, $password, $level);
+                    $this->muser->addUser($username, $password, $level);
                     $this->_forward('index', 'user', 'admin');
                 } else {
                     $form->populate($formData);
@@ -79,7 +79,7 @@ class Admin_UserController extends Zend_Controller_Action {
 
     public function deleteAction() {
         if (isset($_GET['del']) && !empty($_GET['id'])) {
-            $this->view->detail = $this->muser->delteteThiep($_GET['id']);
+            $this->view->detail = $this->muser->delteteUser($_GET['id']);
             $this->_redirect('/admin/user');
         }
     }
