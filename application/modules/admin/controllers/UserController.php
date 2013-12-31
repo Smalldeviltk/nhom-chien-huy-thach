@@ -68,7 +68,7 @@ class Admin_UserController extends Zend_Controller_Action {
                     $username = $this->getRequest()->getPost('username');
                     $password = $this->getRequest()->getPost('password');
                     $level = $this->getRequest()->getPost('level');
-                    $this->thiepTable->updateThiep($username, $password, $level);
+                    $this->muser->updateThiep($username, $password, $level);
                     $this->_forward('index', 'user', 'admin');
                 } else {
                     $form->populate($formData);
